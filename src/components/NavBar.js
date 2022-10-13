@@ -25,6 +25,9 @@ import {
   ShieldCheckIcon,
   Squares2X2Icon,
   XMarkIcon,
+  GlobeAmericasIcon,
+  WifiIcon,
+  TableCellsIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
@@ -95,62 +98,65 @@ export const NavBar = () => {
     {
       name: <>
         <NavHashLink
-          smooth to="#about"
-          className="text-base font-medium text-gray-500 hover:text-gray-900"
+          smooth to="https://giomoscato.com/#/"
+          className="text-base font-medium text-white "
           activeStyle={{ color: 'red' }}
         >
-          About
+          Gio Moscato.com
         </NavHashLink>
       </>,
-      description: 'Get a better understanding of where your traffic is coming from.',
-      href: '#',
-      icon: ChartBarIcon,
+      description: 'Personal Portfolio Website for Giovanni Moscato built using React.js',
+      icon: GlobeAmericasIcon,
 
     },
     {
-      name: 'Engagement',
-      description: 'Speak directly to your customers in a more meaningful way.',
-      href: '#',
-      icon: CursorArrowRaysIcon,
+      name: <>
+        <a
+          href="https://fullstackingdevelopment.com/"
+          className="text-base font-medium text-white no-underline"
+
+        >
+          FullStackingDevelopment.com
+        </a>
+      </>,
+      description: 'Our team is experienced in a range of programming applications.FSD.com is a full stack website utilizing alot of our skillset, built in the React JS framework.',
+      icon: GlobeAmericasIcon,
     },
-    { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
     {
-      name: 'Integrations',
-      description: "Connect with third-party tools that you're already using.",
-      href: '#',
-      icon: Squares2X2Icon,
+      name: <>
+        <NavHashLink
+          smooth to="#about"
+          className="text-base font-medium text-white "
+          activeStyle={{ color: 'red' }}
+        >
+          Arduino nano 33 IOT project
+        </NavHashLink>
+      </>,
+      description: 'Tbd.',
+      icon: WifiIcon,
     },
-    {
-      name: 'Automations',
-      description: 'Build strategic funnels that will drive your customers to convert',
-      href: '#',
-      icon: ArrowPathIcon,
-    },
+
   ]
   const callsToAction = [
-    { name: 'Watch Demo', href: '#', icon: PlayIcon },
-    { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+    { name: 'Github', href: 'https://github.com/fullstackingdevelopment' },
+    { name: 'Example', },
   ]
   const resources = [
     {
-      name: 'Help Center',
-      description: 'Get all of your questions answered in our forums or contact support.',
-      href: '#',
-      icon: LifebuoyIcon,
+      name: <>
+        <NavHashLink
+          smooth to="#about"
+          className="text-base font-medium text-white "
+          activeStyle={{ color: 'red' }}
+        >
+          Endpoints
+        </NavHashLink>
+      </>,
+      description: 'Personal Portfolio Website for Giovanni Moscato built using React.js',
+      icon: TableCellsIcon,
+
     },
-    {
-      name: 'Guides',
-      description: 'Learn how to maximize our platform to get the most out of it.',
-      href: '#',
-      icon: BookmarkSquareIcon,
-    },
-    {
-      name: 'Events',
-      description: 'See what meet-ups and other events we might be planning near you.',
-      href: '#',
-      icon: CalendarIcon,
-    },
-    { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
+
   ]
   const recentPosts = [
     { id: 1, name: 'Boost your conversion rate', href: '#' },
@@ -169,8 +175,10 @@ export const NavBar = () => {
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="flex items-center justify-between border-b-1 border-black py-6 md:justify-start md:space-x-10">
 
-            <div className="flex justify-start lg:w-0 lg:flex-1">
-              <h1 className="text-white">gmdevapi</h1>
+            <div className="flex justify-start lg:w-0 lg:flex-1 ">
+              <a href="/" className="no-underline">
+                <h1 className="text-white hover:text-slate-600">gmdevapi</h1>
+              </a>
             </div>
 
             <div className="-my-2 -mr-2 md:hidden">
@@ -187,10 +195,10 @@ export const NavBar = () => {
                     <Popover.Button
                       className={classNames(
                         open ? 'text-white' : 'text-white',
-                        'group inline-flex items-center rounded-md bg-black text-black font-medium hover:text-grey-900 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 focus:m-5 '
+                        'group inline-flex  items-center rounded-md bg-black text-black font-medium hover:text-grey-900 '
                       )}
                     >
-                      <span>Projects using gmdevapi</span>
+                      <span className="">Projects using gmdevapi</span>
                       <ChevronDownIcon
                         className={classNames(
                           open ? 'text-white' : 'text-white',
@@ -212,32 +220,25 @@ export const NavBar = () => {
 
 
                       <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
-                        <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        <div className="overflow-hidden rounded-lg shadow-lg ring-3 ring-black ring-opacity-2">
+                          <div className="relative grid gap-6 ring-2 bg-black divide-solid border-2 border-slate-500  px-5 py-6 sm:gap-8 sm:p-8">
                             {solutions.map((item) => (
-                              <a
+                              <div
                                 key={item.name}
-                                href={item.href}
-                                className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                                className="-m-3 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
                               >
-                                <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
+                                <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                  <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                  <p className="text-base font-medium text-white no-underline">{item.name}</p>
+                                  <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
                                 </div>
-                              </a>
+                              </div>
                             ))}
                           </div>
                           <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                             {callsToAction.map((item) => (
                               <div key={item.name} className="flow-root">
-                                <a
-                                  href={item.href}
-                                  className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-                                >
-                                  <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                                  <span className="ml-3">{item.name}</span>
-                                </a>
+                                <a href={item.href} className="ml-3 no-underline text-black">{item.name}</a>
                               </div>
                             ))}
                           </div>
@@ -254,13 +255,13 @@ export const NavBar = () => {
                     <Popover.Button
                       className={classNames(
                         open ? 'text-white' : 'text-white',
-                        'group inline-flex items-center rounded-md bg-black text-black font-medium hover:text-grey-900 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 focus:m-5 '
+                        'group inline-flex  items-center rounded-md bg-black text-black font-medium hover:text-grey-900 '
                       )}
                     >
-                      <span>Documentation</span>
+                      <span className="">Documentation</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? 'text-gray-600' : 'text-gray-400',
+                          open ? 'text-white' : 'text-white',
                           'ml-2 h-5 w-5 group-hover:text-gray-500'
                         )}
                         aria-hidden="true"
@@ -279,42 +280,22 @@ export const NavBar = () => {
                       <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
 
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                          <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8">
                             {resources.map((item) => (
-                              <a
+                              <div
                                 key={item.name}
-                                href={item.href}
-                                className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                                className="-m-3 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
                               >
-                                <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
+                                <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                  <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                  <p className="text-base font-medium text-white no-underline">{item.name}</p>
+                                  <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
                                 </div>
-                              </a>
+                              </div>
                             ))}
 
                           </div>
-                          <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
-                            <div>
-                              <h3 className="text-base font-medium text-gray-500">Recent Posts</h3>
-                              <ul role="list" className="mt-4 space-y-4">
-                                {recentPosts.map((post) => (
-                                  <li key={post.id} className="truncate text-base">
-                                    <a href={post.href} className="font-medium text-gray-900 hover:text-gray-700">
-                                      {post.name}
-                                    </a>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                            <div className="mt-5 text-sm">
-                              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                                View all posts
-                                <span aria-hidden="true"> &rarr;</span>
-                              </a>
-                            </div>
-                          </div>
+
                         </div>
                       </Popover.Panel>
                     </Transition>
@@ -324,15 +305,20 @@ export const NavBar = () => {
 
               <NavHashLink
                 smooth to="#about"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-base font-medium text-white hover:text-gray-900"
                 activeStyle={{ color: 'red' }}
               >
                 About
               </NavHashLink>
 
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <NavHashLink
+                smooth to="#about"
+                className="text-base font-medium text-white hover:text-gray-900"
+                activeStyle={{ color: 'red' }}
+              >
                 Contact
-              </a>
+              </NavHashLink>
+
             </Popover.Group>
 
           </div>
@@ -353,55 +339,70 @@ export const NavBar = () => {
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
+
                   <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                      alt="Your Company"
-                    />
+                    <a href="/" className="no-underline">
+                      <h1 className="text-black hover:text-slate-600">gmdevapi</h1>
+                    </a>
                   </div>
+
                   <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                      <span className="sr-only">Close menu</span>
+                      <span className="text-black mr-5">Close menu</span>
                       <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
+
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-8">
                     {solutions.map((item) => (
-                      <a
+                      <div
                         key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                        className="-m-3 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
                       >
-                        <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
-                        <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                      </a>
+                        <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white no-underline">{item.name}</p>
+                          <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
+                        </div>
+                      </div>
+                    ))}
+
+                    {resources.map((item) => (
+                      <div
+                        key={item.name}
+                        className="-m-3 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
+                      >
+                        <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white no-underline">{item.name}</p>
+                          <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
+                        </div>
+                      </div>
                     ))}
                   </nav>
                 </div>
               </div>
               <div className="space-y-6 py-6 px-5">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Pricing
-                  </a>
+                  <NavHashLink
+                    smooth to="#about"
+                    className="text-base font-medium text-black hover:text-gray-900"
+                    activeStyle={{ color: 'red' }}
+                  >
+                    About
+                  </NavHashLink>
 
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Docs
-                  </a>
-                  {resources.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+                  <NavHashLink
+                    smooth to="#about"
+                    className="text-base font-medium text-black hover:text-gray-900"
+                    activeStyle={{ color: 'red' }}
+                  >
+                    Contact
+                  </NavHashLink>
+
                 </div>
-
               </div>
             </div>
           </Popover.Panel>

@@ -12,7 +12,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
 
-  const toRotate = [ "_GMDev", "Antonio Erick", "TeamMember3" ];
+  const toRotate = ["_GMDev", "Antonio Erick", "TeamMember3"];
 
   const period = 1000;
 
@@ -56,7 +56,7 @@ export const Banner = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
     setwindowSizeX([window.innerWidth, window.innerHeight]);
-   
+
   }, [])
 
   useEffect(() => {
@@ -93,57 +93,27 @@ export const Banner = () => {
   }
 
   return (
-    <section className={bannerOffset} id="home">
-      <Container>
-        <Row className="aligh-items-center">
+    <div className="bg-gray-50 ">
+      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <span className="block mt-20"> </span>
+          <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500"> CloudFlares</em> cloud edge technology </b>,  <em className="text-sky-500"> tailwindCSS</em>, and <em className="text-blue-500"> React.js</em></span>
+        </h2>
+        <div className="mt-8 flex lg:mt-10 lg:flex-shrink-0 lg:flex-col">
 
-          <Col xs={12} md={6} xl={7}>
+          <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+            CloudFlare Workers?
+          </button>
 
-            <div >
-              <span
-                className={tagline}>
-                Full Stack-ing Development.com
-              </span>
+          <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white">
+            tailwindCSS ?
+          </button>
 
-              <h1>
-               
-                <span
-                  className="txt-rotate"
-                  dataPeriod="1000"
-                  data-rotate='[ "_GMDev", "AntionioEric", "TeamMember3" ]'>
-                  <span
-                    className={typingAnimation}
-                  >
-                    {`Our team @${text}`}
-                  </span>
-                </span>
-              </h1>
-
-              <p className={devDescription}>
-                We are a team yay! 
-              </p>
-
-              <button 
-                onClick={() => console.log('connect')}>
-                  Let’s Connect <ArrowRightCircle size={25} />
-              </button>
-
-            </div>
-          </Col>
-
-          <Col xs={12} md={6} xl={5}>
-
-            <div >
-              <img 
-                src={headerImg} 
-                alt="Header Img" 
-              />
-            </div>
-
-          </Col>
-
-        </Row>
-      </Container>
-    </section>
+          <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+            react.js ?
+          </button>
+        </div>
+      </div>
+    </div>
   )
 }
