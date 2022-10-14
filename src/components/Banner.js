@@ -18,21 +18,21 @@ export const Banner = () => {
 
   const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
 
-  let showExtras;
+  let mobileResize;
   let typingAnimation;;
   let bannerOffset;
   let tagline;
   let devDescription;
 
   if (windowSizeX[0] < 700) {
-    showExtras = false;
+    mobileResize = false;
     typingAnimation = 'wrap-mobile';
     bannerOffset = 'banner-mobile';
     tagline = 'tagline-mobile';
     devDescription = 'p-mobile';
   }
   else {
-    showExtras = true;
+    mobileResize = true;
     typingAnimation = 'wrap';
     bannerOffset = 'banner';
     tagline = 'tagline';
@@ -93,27 +93,57 @@ export const Banner = () => {
   }
 
   return (
+    <>
+    {  mobileResize ?
+
+    <div className="bg-gray-50 ">
+    <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <span className="block mt-20"> </span>
+        <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500"> CloudFlares</em> edge computing technology </b>,  <em className="text-sky-500"> tailwindCSS</em>, and <em className="text-blue-500"> React.js</em></span>
+      </h2>
+      <div className="mt-8 flex lg:mt-10 lg:flex-shrink-0 lg:flex-col">
+
+        <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+          CloudFlare Workers?
+        </button>
+
+        <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white">
+          tailwindCSS ?
+        </button>
+
+        <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+          react.js ?
+        </button>
+      </div>
+    </div>
+  </div>
+
+    :
     <div className="bg-gray-50 ">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <span className="block mt-20"> </span>
-          <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500"> CloudFlares</em> cloud edge technology </b>,  <em className="text-sky-500"> tailwindCSS</em>, and <em className="text-blue-500"> React.js</em></span>
+          <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500 m-2"> CloudFlares <br/></em>  </b> edge computing technology,  <em className="text-sky-500 m-2"> tailwindCSS</em> & <em className="text-blue-500 m-2"> React.js</em></span>
         </h2>
-        <div className="mt-8 flex lg:mt-10 lg:flex-shrink-0 lg:flex-col">
+        <div className="mt-8 flex sm:p-5 ">
 
-          <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
-            CloudFlare Workers?
+          <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
+            CloudFlare <br/>
+            Workers?
           </button>
 
-          <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white">
-            tailwindCSS ?
+          <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
+            tailwind <br/> CSS ?
           </button>
 
-          <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+          <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
             react.js ?
           </button>
         </div>
       </div>
     </div>
+    }
+    </>
   )
 }

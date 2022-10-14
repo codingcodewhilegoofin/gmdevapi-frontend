@@ -118,13 +118,13 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="projects">
+    <section className="project " id="projects">
 
       <Container>
         <Row>
           <Col size={12}>
 
-            <div className="animate__animated animate__fadeIn">
+            <div className="animate__animated animate__fadeIn z-30">
               <h2>Projects</h2>
               <p>Projects that our team is currently working on or completed. This includes team based projects as well as personal.</p>
 
