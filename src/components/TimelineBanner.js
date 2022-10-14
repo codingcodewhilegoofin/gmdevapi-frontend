@@ -60,46 +60,13 @@ export const TimelineBanner = () => {
 
   }, [])
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => { clearInterval(ticker) };
-  }, [text])
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(500);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
-    }
-  }
-
   return (
     <>
       {mobileResize ?
 
         <>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
-            <span className="block text-black text-5xl text-center mt-2"> Timeline of Projects using the api</span>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl h-fit">
+            <span className="block text-black text-5xl text-center mt-2"> Projects and 3rd party open source API's<br/> involved with gmdevapi</span>
           </h2>
 
           <div className="bg-grey-900 mt-5">
@@ -114,18 +81,13 @@ export const TimelineBanner = () => {
           :
           <>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
-              <span className="block text-black text-5xl text-center"> Timeline of Projects using the api</span>
+              <span className="block text-black text-5xl text-center"> Projects and 3rd party open source API's <br/>involved with gmdevapi</span>
             </h2>
 
-            <div className="bg-white mt-5 ">
-              <div className="mx-auto max-w-7xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
-
-                <div className="mt-8 flex sm:p-5 ">
-
+            <div className="bg-white mt-5 mb-10" style={{ height: '100%'}}>
+              
                   <TimelineComponent />
 
-                </div>
-              </div>
             </div>
           </>
       }
