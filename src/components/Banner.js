@@ -108,7 +108,7 @@ export const Banner = () => {
           CloudFlare Workers?
         </button>
 
-        <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white">
+        <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
           tailwindCSS ?
         </button>
 
@@ -126,15 +126,15 @@ export const Banner = () => {
           <span className="block mt-20"> </span>
           <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500 m-2"> CloudFlares <br/></em>  </b> edge computing technology,  <em className="text-sky-500 m-2"> tailwindCSS</em> & <em className="text-blue-500 m-2"> React.js</em></span>
         </h2>
-        <div className="mt-8 flex sm:p-5 ">
+        <div className="mt-8 flex-column sm:p-5 ">
 
           <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
-            CloudFlare <br/>
+            CloudFlare 
             Workers?
           </button>
 
           <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
-            tailwind <br/> CSS ?
+            tailwind  CSS ?
           </button>
 
           <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">

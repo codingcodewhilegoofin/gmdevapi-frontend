@@ -171,7 +171,7 @@ export const NavBar = () => {
   return (
     <Router>
 
-      <Popover className={"fixed bg-black w-full z-30"}>
+      <Popover className={"fixed bg-black w-screen z-30"}>
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <div className="flex items-center justify-between border-b-1 border-black py-6 md:justify-start md:space-x-10">
 
