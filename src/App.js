@@ -7,6 +7,7 @@ import { ProjectBanner } from "./components/ProjectBanner.js";
 import { Footer } from "./components/Footer.js";
 import { TimelineBanner } from "./components/TimelineBanner.js";
 import { EndpointsBanner } from './components/EndpointsBanner';
+import { AboutBanner } from './components/AboutBanner';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <TimelineBanner />
       <ProjectBanner />
       <EndpointsBanner/>
-      
+      <AboutBanner/>
       <Footer />
     </div>
   );
