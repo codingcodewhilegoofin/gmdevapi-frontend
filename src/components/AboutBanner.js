@@ -154,16 +154,14 @@ export const AboutBanner = () => {
         <>
           
           <div className="bg-black mt-5 ">
-            <div className="mx-auto max-w-7xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
+
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
             <span className="block text-white text-5xl  m-0">
               About
             </span>
           </h2>
 
-         
-
-                <div className="bg-white py-12 w-fit">
+                <div className="bg-white py-12 w-fit " style={{ border:'1px solid black' }}>
                  
                     <p className="text-center mt-2 text-2xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
                       About gmdevapi and why it's here
@@ -174,22 +172,19 @@ export const AboutBanner = () => {
                   </div>
 
                   <div className="mt-5">
-                    <dl className="space-y-2 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-2 md:space-y-0">
+                    <dl className=" ">
                       {featuresMobile.map((feature) => (
                         <div key={feature.name} className="relative">
                           <dt>
-                            <div className="mt-0 absolute flex h-12 w-12 items-center justify-center rounded-md bg-black text-white">
-                              <feature.icon className="h-6 w-6" aria-hidden="true" />
-                            </div>
-                            <p className="ml-12  font-medium leading-6 text-white">{feature.name}</p>
+                            <p className="ml-1  font-medium leading-6 text-white">{feature.name}</p>
                           </dt>
-                          <dd className=" mt-2 ml-16 text-sm text-white">{feature.description}</dd>
+                          <dd className="ml-1   text-sm text-white">{feature.description}</dd>
                         </div>
                       ))}
                     </dl>
                   </div>
     
-            </div>
+  
           </div>
         </>
       }

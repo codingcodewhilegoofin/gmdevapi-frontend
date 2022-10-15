@@ -177,7 +177,7 @@ export const NavBar = () => {
               </a>
             </div>
 
-            <div className="-my-2 -mr-2 md:hidden">
+            <div className=" md:hidden">
               <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span className=" text-black mr-2">MENU</span>
                 <Bars3Icon className="h-6 w-6 text-black" aria-hidden="true" />
@@ -273,7 +273,7 @@ export const NavBar = () => {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+                      <Popover.Panel className="absolute left-1/2 z-30 mt-3 w-fit  ">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
 
                           <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8">
@@ -331,7 +331,7 @@ export const NavBar = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel focus className=" z-0 absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
+          <Popover.Panel focus className=" z-30 absolute inset-x-0 top-0 origin-top  transition ">
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">

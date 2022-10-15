@@ -82,7 +82,7 @@ export const TimelineComponent = () => {
   return (
     <Router>
 
-      <Timeline position="alternate" style={{ width: '100%',  }}>
+      <Timeline position="alternate" style={{ width: '99%',  }}>
 
         <p className="text-center" >
           <b style={{color: 'orange'}}>CloudFlare worker </b> is created and front end deployed to CloudFlare pages via <b>github</b>
@@ -107,8 +107,8 @@ export const TimelineComponent = () => {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              giomoscato.com
+            <Typography  component="span">
+              <b>giomoscato.com</b>
             </Typography>
             <Typography>Uses gmdevapi financial endpoints to update its stock & crypto UI cards</Typography>
           </TimelineContent>
@@ -132,8 +132,8 @@ export const TimelineComponent = () => {
             <TimelineConnector style={{ color: 'green' }} />
           </TimelineSeparator>
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              giomoscato.com
+            <Typography component="span">
+            <b>giomoscato.com</b>
             </Typography>
             <Typography style={{ color: 'green' }}>Spotify endpoints enable query of my music or any musican you like</Typography>
           </TimelineContent>
@@ -158,10 +158,10 @@ export const TimelineComponent = () => {
             <TimelineConnector style={{ color: 'green' }} />
           </TimelineSeparator>
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              giomoscato.com
+            <Typography  component="span">
+             <b>giomoscato.com</b>
             </Typography>
-            <Typography style={{ color: 'teal', fontWeight: 'bold' }}>Arduino endpoints control an irl IOT device circuit through a nano 33 controller.</Typography>
+            <Typography  style={{ color: 'teal',  }}>Arduino endpoints control an irl IOT device circuit through a nano 33 controller.</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -184,8 +184,8 @@ export const TimelineComponent = () => {
             <TimelineConnector style={{ color: 'green' }} />
           </TimelineSeparator>
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="p" component="span">
-              FullStacking<br/>Development.com
+            <Typography  component="span">
+            <b>FSD.com</b>
             </Typography>
             <Typography style={{ color: 'darkgreen', }}> Pulls data from MongoDB endpoints to fill content.</Typography>
           </TimelineContent>

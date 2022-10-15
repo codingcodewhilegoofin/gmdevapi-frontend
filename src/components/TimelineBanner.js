@@ -76,8 +76,8 @@ export const TimelineBanner = () => {
 
           :
           <>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-5">
-              <span className="block text-black text-5xl text-center"> Projects and 3rd party open source API's <br/>involved with gmdevapi</span>
+            <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-5">
+              <span className="block text-black text-3xl text-center"> Projects and 3rd party open source API's <br/>involved with gmdevapi</span>
             </h2>
 
             <div className="bg-white mt-5 mb-10" style={{ height: '100%'}}>
