@@ -118,10 +118,10 @@ export const EndpointsBanner = () => {
             </span>
           </h2>
 
-          <div className="bg-white mt-5 ">
-            <div className="mx-auto max-w-7xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
+          <div className="flex-column bg-white mt-5 ">
+            <div className="flex-column mx-auto max-w-7xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
 
-              <div className="mt-8 flex sm:p-5 ">
+              <div className=" flex-column mt-8 flex sm:p-5 ">
 
                 <EndpointsComponent />
 
