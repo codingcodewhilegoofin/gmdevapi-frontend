@@ -31,9 +31,10 @@ function App() {
 
         <div style={{ alignSelf: 'center', flexDirection: 'column', display: 'flex', width: '99%', height: '100%', }}>
           <Banner />
+          <AdBanner />
         </div>
 
-        <AdBanner />
+       
 
         <div style={{ alignSelf: 'center', flexDirection: 'column', display: 'flex', width: '99%', height: '100%', }}>
           <TimelineBanner />
@@ -41,9 +42,9 @@ function App() {
           <EndpointsBanner />
 
           <AboutBanner />
+          <AdBanner />
         </div>
 
-        <AdBanner />
         <Footer />
       </div>
     </>
