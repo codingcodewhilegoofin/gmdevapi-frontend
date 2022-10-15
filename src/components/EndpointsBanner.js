@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { EndpointsComponent } from './EndpointsComponent';
