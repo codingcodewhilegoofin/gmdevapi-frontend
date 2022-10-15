@@ -76,14 +76,13 @@ export const AdBanner = () => {
         :
         <div className="bg-white mt-5 mb-2 " style={{ border: '1px solid black', padding: '5px', margin: '5px' }}>
 
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             <span className="block text-black text-center"> Need help building <br /> a web-app ?
               <a href='https://linktr.ee/_GMDev' className="no-underline " style={{ color: 'lightgreen' }}>
-                https://linktr.ee/_GMDev
+               <br/> https://linktr.ee/_GMDev
               </a>
             </span>
           </h2>
-
 
         </div>
       }
