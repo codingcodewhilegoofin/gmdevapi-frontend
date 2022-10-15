@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer.js";
 import { TimelineBanner } from "./components/TimelineBanner.js";
 import { EndpointsBanner } from './components/EndpointsBanner';
 import { AboutBanner } from './components/AboutBanner';
+import { AdBanner } from './components/AdBanner';
 
 
 function App() {
@@ -24,19 +25,17 @@ function App() {
           alignItems: 'center',
           width: '100%',
           height: '100%',
-        
           justifyContent: 'space-evenly',
           alignsSelf: 'center',
         }}>
 
-
-
-        <div style={{ alignSelf: 'center', flexDirection: 'column',display: 'flex', width: '99%', height: '100%',  }}>
-
+        <div style={{ alignSelf: 'center', flexDirection: 'column', display: 'flex', width: '99%', height: '100%', }}>
           <Banner />
         </div>
 
-        <div style={{ alignSelf: 'center', flexDirection: 'column', display: 'flex', width: '99%', height: '100%',  }}>
+        <AdBanner />
+
+        <div style={{ alignSelf: 'center', flexDirection: 'column', display: 'flex', width: '99%', height: '100%', }}>
           <TimelineBanner />
           <ProjectBanner />
           <EndpointsBanner />
@@ -44,7 +43,7 @@ function App() {
           <AboutBanner />
         </div>
 
-
+        <AdBanner />
         <Footer />
       </div>
     </>

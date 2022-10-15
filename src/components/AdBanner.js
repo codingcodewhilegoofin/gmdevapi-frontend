@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
-import { TimelineComponent } from './TimelineComponent.js';
 
-export const TimelineBanner = () => {
+export const AdBanner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -56,37 +55,39 @@ export const TimelineBanner = () => {
 
   }, [])
 
+ 
+
   return (
     <>
-      {mobileResize ?
+    {  mobileResize ?
 
-        <>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl h-fit ">
-            <span className="block text-black text-5xl text-center mt-2"> Projects and 3rd party open source API's<br/> involved with gmdevapi</span>
-          </h2>
+    <div className=" text-center bg-white mb-5">
+    <div className=" text-centermx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+      <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <span className="block text-black "> Need help building a web-app ? <br/> 
+        <a href='https://linktr.ee/_GMDev' className="no-underline m-10" style={{ color: 'lightgreen'}}>
+         https://linktr.ee/_GMDev
+        </a>
+        </span>
+      </h2>
+      
+    </div>
+  </div>
 
-          <div className="bg-grey-900 mt-5">
-            <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex-column lg:items-center lg:justify-between lg:py-16 lg:px-8">
-
-              <TimelineComponent />
-
-            </div>
-          </div>
-          </>
-
-          :
-          <>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-5">
-              <span className="block text-black text-5xl text-center"> Projects and 3rd party open source API's <br/>involved with gmdevapi</span>
-            </h2>
-
-            <div className="bg-white mt-5 mb-10" style={{ height: '100%'}}>
-              
-                  <TimelineComponent />
-
-            </div>
-          </>
-      }
-        </>
+    :
+    <div className="bg-white mt-5 mb-2 " style={{border: '1px solid black', padding: '5px', margin: '5px'}}>
+      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <span className="block text-black text-center"> Need help building <br/> a web-app ? 
+        <a href='https://linktr.ee/_GMDev' className="no-underline " style={{ color: 'lightgreen'}}>
+         https://linktr.ee/_GMDev
+        </a>
+        </span>
+      </h2>
+       
+      </div>
+    </div>
+    }
+    </>
   )
 }
