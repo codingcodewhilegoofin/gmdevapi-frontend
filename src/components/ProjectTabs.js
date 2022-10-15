@@ -121,7 +121,7 @@ export const ProjectTabs = () => {
     <Router>
 
       <Box
-        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224, width: '100%' }}
+        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', width: '100%' }}
         className="z-0 "
       >
         <Tabs

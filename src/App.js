@@ -12,15 +12,42 @@ import { AboutBanner } from './components/AboutBanner';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <NavBar />
-      <Banner />
-      <TimelineBanner />
-      <ProjectBanner />
-      <EndpointsBanner/>
-      <AboutBanner/>
-      <Footer />
-    </div>
+
+      <div
+        className="App"
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          flexDirection: 'column',
+          alignItems: 'center',
+          width: '100%',
+          height: '100%',
+        
+          justifyContent: 'space-evenly',
+          alignsSelf: 'center',
+        }}>
+
+
+
+        <div style={{ alignSelf: 'center', flexDirection: 'column',display: 'flex', width: '99%', height: '100%',  }}>
+
+          <Banner />
+        </div>
+
+        <div style={{ alignSelf: 'center', flexDirection: 'column', display: 'flex', width: '99%', height: '100%',  }}>
+          <TimelineBanner />
+          <ProjectBanner />
+          <EndpointsBanner />
+
+          <AboutBanner />
+        </div>
+
+
+        <Footer />
+      </div>
+    </>
   );
 }
 

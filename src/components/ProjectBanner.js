@@ -115,7 +115,7 @@ export const ProjectBanner = () => {
               <span className="block mt-0 mb-2"> </span>
               <span className="block text-white text-5xl"> Projects</span>
             </h2>
-            <div className="mt-8 flex sm:p-5 ">
+            <div className="mt-8 flex-column sm:p-2 ">
 
               <ProjectTabs />
 

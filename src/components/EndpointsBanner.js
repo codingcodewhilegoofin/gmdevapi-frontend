@@ -113,15 +113,15 @@ export const EndpointsBanner = () => {
         :
         <>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
-            <span className="block text-black text-5xl text-center m-5">
+            <span className="block text-black text-5xl text-center mt-5">
               Endpoints
             </span>
           </h2>
 
           <div className="flex-column bg-white mt-5 ">
-            <div className="flex-column mx-auto max-w-7xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
+            <div className="flex-column mx-auto max-w-6xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
 
-              <div className=" flex-column mt-8 flex sm:p-5 ">
+              <div className=" flex-column mt-8  p-2 ">
 
                 <EndpointsComponent />
 

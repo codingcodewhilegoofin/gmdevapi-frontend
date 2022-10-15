@@ -245,7 +245,7 @@ export const NavBar = () => {
                 )}
               </Popover>
 
-              <Popover className="relative">
+              <Popover className="relative" >
                 {({ open }) => (
                   <>
                     <Popover.Button
