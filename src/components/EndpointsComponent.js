@@ -79,55 +79,55 @@ export const EndpointsComponent = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
+
+
   return (
     <Router>
 
       <p className="mb-5"> Spotify</p>
+
       <div>
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>
-              General settings
-            </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Does stuff and things to make long hehe</Typography>
+
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-              Aliquam eget maximus est, id dignissim quam.
+              v1/Spotify
             </Typography>
           </AccordionDetails>
         </Accordion>
+
         <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2bh-content"
-            id="panel2bh-header"
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              You are currently not an owner
-            </Typography>
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Does stuff and things to make long hehe</Typography>
+
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-              varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-              laoreet.
+              v1/Spotify
             </Typography>
           </AccordionDetails>
         </Accordion>
-       
-        
+
       </div>
 
       <p className="mb-5 mt-5"> Arduino</p>
       <div>
-        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
@@ -145,7 +145,7 @@ export const EndpointsComponent = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+        <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2bh-content"
@@ -164,8 +164,8 @@ export const EndpointsComponent = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-       
-        
+
+
       </div>
 
       <p className="mb-5  mt-5"> OpenAi</p>
@@ -207,8 +207,8 @@ export const EndpointsComponent = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-       
-        
+
+
       </div>
 
       <p className="mb-5  mt-5"> Financial </p>
@@ -250,8 +250,8 @@ export const EndpointsComponent = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-       
-        
+
+
       </div>
 
       <p className="mb-5  mt-5"> MongoDB</p>
@@ -293,8 +293,8 @@ export const EndpointsComponent = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-       
-        
+
+
       </div>
 
 
