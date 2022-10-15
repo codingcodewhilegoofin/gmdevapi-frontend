@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import FSDlogo from '../assets/img/FSDLogo.png';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+
 import { HashLink } from 'react-router-hash-link';
 import { NavHashLink } from 'react-router-hash-link';
 import {

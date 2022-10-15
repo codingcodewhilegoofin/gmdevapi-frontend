@@ -272,7 +272,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 500px 0 200px 0;
-  background-image: url('./assets/img/FSDLogo.png');
+  
   background-position: center;
   background-size: fit;
   background-repeat: no-repeat;
@@ -284,7 +284,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner-mobile {
   margin-top: 0;
   padding: 200px 0 0px 0;
-  background-image: url('./assets/img/FSDLogo.png');
+
   background-position: center;
   background-size: fit;
   background-repeat: no-repeat;

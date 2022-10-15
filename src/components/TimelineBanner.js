@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/FSDLogo.png";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+
 import { TimelineComponent } from './TimelineComponent.js';
 
 export const TimelineBanner = () => {
