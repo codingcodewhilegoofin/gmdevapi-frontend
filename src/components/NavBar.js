@@ -128,7 +128,7 @@ export const NavBar = () => {
           Arduino nano 33 IOT project
         </NavHashLink>
       </>,
-      description: 'Tbd.',
+      description: 'Arduino Mircrocontroller can be controlled in real life through gmdevapi using HTTP calls.',
       icon: WifiIcon,
     },
 
@@ -148,7 +148,7 @@ export const NavBar = () => {
           Endpoints
         </NavHashLink>
       </>,
-      description: 'Personal Portfolio Website for Giovanni Moscato built using React.js',
+      description: 'Endpoints for gmdevapi. Sorted by HTTP call type and 3rd party services',
       icon: TableCellsIcon,
 
     },
@@ -321,90 +321,94 @@ export const NavBar = () => {
 
         </div>
 
+     
+          <Transition
+            as={Fragment}
+            enter="duration-200 ease-out"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="duration-100 ease-in"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            <div style={{ width: '100%', border: '2px solid black'}}>
+            <Popover.Panel focus className=" z-30 absolute inset-x-0 top-0 origin-top  transition mt-1">
+              <div className="divide-y-2 divide-black rounded-lg bg-blue-500 shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="px-1 pt-1 pb-1">
+                  <div className="flex items-center justify-between">
 
-        <Transition
-          as={Fragment}
-          enter="duration-200 ease-out"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="duration-100 ease-in"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          <Popover.Panel focus className=" z-30 absolute inset-x-0 top-0 origin-top  transition ">
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="px-5 pt-5 pb-6">
-                <div className="flex items-center justify-between">
+                    <div>
+                      <a href="/" className="no-underline">
+                        <h1 className="text-black hover:text-slate-600">gmdevapi</h1>
+                      </a>
+                    </div>
 
-                  <div>
-                    <a href="/" className="no-underline">
-                      <h1 className="text-black hover:text-slate-600">gmdevapi</h1>
-                    </a>
+                    <div className=" mr-2">
+                      <Popover.Button className="inline-flex  items-center justify-center rounded-md bg-black p-2 text-red-300 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <span className="text-blue-500 mr-5">Close menu</span>
+                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+
                   </div>
+                  <div className="mt-6">
+                    <nav className="grid gap-y-2">
+                      {solutions.map((item) => (
+                        <div
+                          key={item.name}
+                          className="m-1 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
+                        >
+                          <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
+                          <div className="ml-4">
+                            <p className="text-base font-medium text-white no-underline">{item.name}</p>
+                            <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
+                          </div>
+                        </div>
+                      ))}
 
-                  <div className="-mr-2">
-                    <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                      <span className="text-black mr-5">Close menu</span>
-                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                    </Popover.Button>
+                      {resources.map((item) => (
+                        <div
+                          key={item.name}
+                          className=" m-3 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
+                        >
+                          <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
+                          <div className="ml-3">
+                            <p className="text-base font-medium text-white no-underline">{item.name}</p>
+                            <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </nav>
                   </div>
-
                 </div>
-                <div className="mt-6">
-                  <nav className="grid gap-y-8">
-                    {solutions.map((item) => (
-                      <div
-                        key={item.name}
-                        className="-m-3 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
-                      >
-                        <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
-                        <div className="ml-4">
-                          <p className="text-base font-medium text-white no-underline">{item.name}</p>
-                          <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
-                        </div>
-                      </div>
-                    ))}
+                <div className="space-y-6 py-6 px-5">
+                  <div className="grid grid-cols-2 gap-y-2 gap-x-2">
+                    <NavHashLink
+                      smooth to="#about"
+                      className="text-base font-medium text-black hover:text-gray-900"
+                      activeStyle={{ color: 'red' }}
+                    >
+                      About
+                    </NavHashLink>
 
-                    {resources.map((item) => (
-                      <div
-                        key={item.name}
-                        className="-m-3 flex items-start rounded-lg p-3 ring-1 bg-black hover:bg-slate-500"
-                      >
-                        <item.icon className="h-6 w-6 flex-shrink-0 text-blue-600" aria-hidden="true" />
-                        <div className="ml-4">
-                          <p className="text-base font-medium text-white no-underline">{item.name}</p>
-                          <p className="mt-1 text-sm text-blue-200 no-underline " >{item.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </nav>
+                    <NavHashLink
+                      smooth to="#about"
+                      className="text-base font-medium text-black hover:text-gray-900"
+                      activeStyle={{ color: 'red' }}
+                    >
+                      Contact
+                    </NavHashLink>
+
+                  </div>
                 </div>
               </div>
-              <div className="space-y-6 py-6 px-5">
-                <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <NavHashLink
-                    smooth to="#about"
-                    className="text-base font-medium text-black hover:text-gray-900"
-                    activeStyle={{ color: 'red' }}
-                  >
-                    About
-                  </NavHashLink>
-
-                  <NavHashLink
-                    smooth to="#about"
-                    className="text-base font-medium text-black hover:text-gray-900"
-                    activeStyle={{ color: 'red' }}
-                  >
-                    Contact
-                  </NavHashLink>
-
-                </div>
-              </div>
+            </Popover.Panel>
             </div>
-          </Popover.Panel>
-        </Transition>
+          </Transition>
+        
 
       </Popover>
+
     </Router >
   )
 }

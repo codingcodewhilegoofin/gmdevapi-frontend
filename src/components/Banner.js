@@ -120,7 +120,7 @@ export const Banner = () => {
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <span className="block mt-20"> </span>
-          <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500 m-2"> CloudFlares <br/></em>  </b> edge computing technology,  <em className="text-sky-500 m-2"> tailwindCSS</em> & <em className="text-blue-500 m-2"> React.js</em></span>
+          <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500 m-2 text-4xl"> CloudFlares <br/></em>  </b> edge computing technology,  <em className="text-sky-500 m-2"> tailwindCSS</em> & <em className="text-blue-500 m-2"> React.js</em></span>
         </h2>
         <div className="mt-8 flex-column sm:p-5 ">
 

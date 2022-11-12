@@ -88,13 +88,13 @@ export const TimelineComponent = () => {
 
         <Timeline position="alternate" style={{ width: '100%', }}>
 
-          
+
 
           <p className="text-center text-3xl" >
             <b style={{ color: 'orange' }}>CloudFlare worker </b> is created and front-end deployed to CloudFlare pages via <b>github</b>
 
           </p>
-          
+
 
           <TimelineItem>
             <TimelineOppositeContent
@@ -102,10 +102,10 @@ export const TimelineComponent = () => {
               align="right"
               variant="body2"
               color="text.secondary"
-              style={{fontSize:'x-large'}}
+              style={{ fontSize: 'x-large' }}
             >
               Financial endpoints established with
-              <a href='https://polygon.io/' className="no-underline" style={{ color: 'purple' , fontSize:'large' }}> Polygon.io </a>
+              <a href='https://polygon.io/' className="no-underline" style={{ color: 'purple', fontSize: 'large' }}> Polygon.io </a>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector style={{ color: 'black' }} />
@@ -115,10 +115,10 @@ export const TimelineComponent = () => {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography component="span"  style={{fontSize:'x-large'}}>
+              <Typography component="span" style={{ fontSize: 'x-large' }}>
                 <b>giomoscato.com</b>
               </Typography>
-              <Typography  style={{fontSize:'large'}}>Uses gmdevapi financial endpoints to update its stock & crypto UI cards</Typography>
+              <Typography style={{ fontSize: 'large' }}>Uses gmdevapi financial endpoints to update its stock & crypto UI cards</Typography>
             </TimelineContent>
           </TimelineItem>
 
@@ -128,10 +128,10 @@ export const TimelineComponent = () => {
               align="left"
               variant="body2"
               color="text.secondary"
-              style={{fontSize:'x-large'}}
+              style={{ fontSize: 'x-large' }}
             >
               Spotify endpoints established with
-              <a href='https://developer.spotify.com/' className="no-underline" style={{ color: 'green' ,fontSize:'large' }}> developer.spotify.com </a>
+              <a href='https://developer.spotify.com/' className="no-underline" style={{ color: 'green', fontSize: 'large' }}> developer.spotify.com </a>
             </TimelineOppositeContent>
             <TimelineSeparator style={{ color: 'green' }}>
               <TimelineConnector style={{ color: 'green' }} />
@@ -141,10 +141,10 @@ export const TimelineComponent = () => {
               <TimelineConnector style={{ color: 'green' }} />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography component="span"  style={{fontSize:'x-large'}}>
+              <Typography component="span" style={{ fontSize: 'x-large' }}>
                 <b>giomoscato.com</b>
               </Typography>
-              <Typography style={{ color: 'green' , fontSize: 'large'}}>Spotify endpoints enable query of my music or any musican you like</Typography>
+              <Typography style={{ color: 'green', fontSize: 'large' }}>Spotify endpoints enable query of my music or any musican you like</Typography>
             </TimelineContent>
           </TimelineItem>
 
@@ -155,10 +155,10 @@ export const TimelineComponent = () => {
               align="right"
               variant="body2"
               color="text.secondary"
-              style={{fontSize:'x-large'}}
+              style={{ fontSize: 'x-large' }}
             >
               Arduino endpoints established with
-              <a href='https://cloud.arduino.cc/?gclid=CjwKCAjwkaSaBhA4EiwALBgQaJPfS_x_GSima_LReNflki1Z1CsvOfF9yd1A4JsZZkBSKklIkEW2AxoCpowQAvD_BwE' className="no-underline" style={{ color: 'teal', fontSize:'large' }}> Arduino IOT CLOUD </a>
+              <a href='https://cloud.arduino.cc/?gclid=CjwKCAjwkaSaBhA4EiwALBgQaJPfS_x_GSima_LReNflki1Z1CsvOfF9yd1A4JsZZkBSKklIkEW2AxoCpowQAvD_BwE' className="no-underline" style={{ color: 'teal', fontSize: 'large' }}> Arduino IOT CLOUD </a>
             </TimelineOppositeContent>
             <TimelineSeparator style={{ color: 'green' }}>
               <TimelineConnector style={{ color: 'green' }} />
@@ -168,10 +168,10 @@ export const TimelineComponent = () => {
               <TimelineConnector style={{ color: 'green' }} />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography component="span"  style={{fontSize:'x-large'}}>
+              <Typography component="span" style={{ fontSize: 'x-large' }}>
                 <b>giomoscato.com</b>
               </Typography>
-              <Typography style={{ color: 'teal', fontSize:'large' }}>Arduino endpoints control an irl IOT device circuit through a nano 33 controller.</Typography>
+              <Typography style={{ color: 'teal', fontSize: 'large' }}>Arduino endpoints control an irl IOT device circuit through a nano 33 controller.</Typography>
             </TimelineContent>
           </TimelineItem>
 
@@ -182,10 +182,10 @@ export const TimelineComponent = () => {
               align="right"
               variant="body2"
               color="text.secondary"
-              style={{fontSize:'x-large'}}
+              style={{ fontSize: 'x-large' }}
             >
               MongoDB endpoints established with
-              <a href='https://api.mongodb.com/' className="no-underline" style={{ color: 'darkgreen', fontSize: 'large'}}> api.mongodb.com's REST HTTP client </a>
+              <a href='https://api.mongodb.com/' className="no-underline" style={{ color: 'darkgreen', fontSize: 'large' }}> api.mongodb.com's REST HTTP client </a>
             </TimelineOppositeContent>
             <TimelineSeparator style={{ color: 'green' }}>
               <TimelineConnector style={{ color: 'green' }} />
@@ -195,25 +195,25 @@ export const TimelineComponent = () => {
               <TimelineConnector style={{ color: 'green' }} />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography component="span"  style={{fontSize:'x-large'}}>
+              <Typography component="span" style={{ fontSize: 'x-large' }}>
                 <b>FSD.com</b>
               </Typography>
-              <Typography style={{ color: 'darkgreen', fontSize: 'large'}}> Pulls data from MongoDB endpoints to fill content.</Typography>
+              <Typography style={{ color: 'darkgreen', fontSize: 'large' }}> Pulls data from MongoDB endpoints to fill content.</Typography>
             </TimelineContent>
           </TimelineItem>
 
           <TimelineItem>
-          
-              <TimelineDot className=' text-3xl ' style={{ backgroundColor: 'grey' }}>
-                
-              </TimelineDot>
-              <TimelineContent sx={{ py: '30px', px: 2 }}>
-              <Typography component="span"  style={{fontSize:'x-large'}}>
-                
+
+            <TimelineDot className=' text-3xl ' style={{ backgroundColor: 'grey' }}>
+
+            </TimelineDot>
+            <TimelineContent sx={{ py: '30px', px: 2 }}>
+              <Typography component="span" style={{ fontSize: 'x-large' }}>
+
               </Typography>
 
             </TimelineContent>
-           
+
           </TimelineItem>
 
 
@@ -221,121 +221,94 @@ export const TimelineComponent = () => {
 
         :
 
-        <Timeline position="alternate" style={{ width: '100%', }}>
+        <div style={{ width: '100%' }}>
+          <Timeline position="alternate" style={{ width: '100%', }}>
 
-          <p className="text-center"  style={{ fontSize: 'small'}}>
-            <b style={{ color: 'orange' }}>CloudFlare worker </b> is created and front end <br/> deployed to CloudFlare pages via <b>github</b>
+            <p className="text-center" style={{ fontSize: 'medium' }}>
+              <b style={{ color: 'orange' }}>CloudFlare worker </b> is created and front end <br /> deployed to CloudFlare pages via <b>github</b>
 
-          </p>
+            </p>
 
-          <TimelineItem>
-            <TimelineOppositeContent
-              sx={{ m: 'auto 0' }}
-              align="right"
-              variant="body2"
-              color="text.secondary"
-              style={{ fontSize: 'small'}}
-            >
-              Financial endpoints established with
-              <a href='https://polygon.io/' className="no-underline" style={{ color: 'purple' }}> Polygon.io </a>
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineConnector style={{ color: 'blacks' }} />
+            <TimelineItem style={{ border: '3px solid purple', borderRadius: '50px', marginBottom: '10px', padding: '5px'}}>
+              <TimelineOppositeContent
+                sx={{ m: 'auto 0' }}
+                align="right"
+                variant="body2"
+                color="text.secondary"
+                style={{ fontSize: 'small' }}
+              >
+                Financial endpoints established with
+                <a href='https://polygon.io/' className="no-underline" style={{ color: 'purple' }}> Polygon.io </a>
+              </TimelineOppositeContent>
+
               <TimelineDot className=' text-2xl' style={{ backgroundColor: 'purple' }} >
                 💸
               </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2  }}>
-              <Typography component="span" style={{ fontSize: 'small'}}>
-                <b>giomoscato.com</b>
-              </Typography>
-              <Typography style={{ fontSize: 'small'}}>Uses gmdevapi financial endpoints <br/>to update its stock & crypto UI cards</Typography>
-            </TimelineContent>
-          </TimelineItem>
 
-          <TimelineItem>
-            <TimelineOppositeContent
-              sx={{ m: 'auto 0' }}
-              align="left"
-              variant="body2"
-              color="text.secondary"
-              style={{ fontSize: 'small'}}
-            >
-              Spotify endpoints established with
-              <a href='https://developer.spotify.com/' className="no-underline" style={{ color: 'green' }}> developer.spotify.com </a>
-            </TimelineOppositeContent>
-            <TimelineSeparator style={{ color: 'green' }}>
-              <TimelineConnector style={{ color: 'green' }} />
-              <TimelineDot className='text-2xl ' style={{ backgroundColor: 'lightgreen', padding: '5px', margin: '0px' }}>
-                
+
+
+            </TimelineItem>
+
+            <TimelineItem style={{ border: '3px solid lightgreen', borderRadius: '50px', marginBottom: '10px', padding: '25px'}}>
+              <TimelineOppositeContent
+                sx={{ m: 'auto 0' }}
+                align="left"
+                variant="body2"
+                color="text.secondary"
+                style={{ fontSize: 'small' }}
+              >
+                Spotify endpoints established with
+                <a href='https://developer.spotify.com/' className="no-underline" style={{ color: 'green' }}> developer.spotify.com </a>
+              </TimelineOppositeContent>
+
+              <TimelineDot className='text-xl ' style={{ backgroundColor: 'lightgreen', padding: '5px', margin: '0px' }}>
+                🎹
               </TimelineDot>
-              <TimelineConnector style={{ color: 'green' }} />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography component="span" style={{ fontSize: 'small'}}>
-                <b>giomoscato.com</b>
-              </Typography>
-              <Typography style={{ color: 'green' , fontSize: 'small'}}>Spotify endpoints enable query <br/> of my music or any musican you like</Typography>
-            </TimelineContent>
-          </TimelineItem>
 
 
-          <TimelineItem>
-            <TimelineOppositeContent
-              sx={{ m: 'auto 0' }}
-              align="right"
-              variant="body2"
-              color="text.secondary"
-              style={{ fontSize: 'small'}}
-            >
-              Arduino endpoints established with
-              <a href='https://cloud.arduino.cc/?gclid=CjwKCAjwkaSaBhA4EiwALBgQaJPfS_x_GSima_LReNflki1Z1CsvOfF9yd1A4JsZZkBSKklIkEW2AxoCpowQAvD_BwE' className="no-underline" style={{ color: 'teal' }}> Arduino IOT CLOUD </a>
-            </TimelineOppositeContent>
-            <TimelineSeparator style={{ color: 'green' }}>
-              <TimelineConnector style={{ color: 'green' }} />
+            </TimelineItem>
+
+
+            <TimelineItem style={{ border: '3px solid lightblue', borderRadius: '50px', marginBottom: '10px', padding: '5px'}}> 
+              <TimelineOppositeContent
+                sx={{ m: 'auto 0' }}
+                align="right"
+                variant="body2"
+                color="text.secondary"
+                style={{ fontSize: 'small' }}
+              >
+                Arduino endpoints established with
+                <a href='https://cloud.arduino.cc/?gclid=CjwKCAjwkaSaBhA4EiwALBgQaJPfS_x_GSima_LReNflki1Z1CsvOfF9yd1A4JsZZkBSKklIkEW2AxoCpowQAvD_BwE' className="no-underline" style={{ color: 'teal' }}> Arduino IOT CLOUD </a>
+              </TimelineOppositeContent>
+
               <TimelineDot className=' text-2xl' style={{ backgroundColor: 'lightblue' }}>
                 📶
               </TimelineDot>
-              <TimelineConnector style={{ color: 'green' }} />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography component="span" style={{ fontSize: 'small'}}>
-                <b>giomoscato.com</b>
-              </Typography>
-              <Typography style={{ color: 'teal', fontSize: 'small'}}>Arduino endpoints control an irl IOT device circuit through a nano 33 controller.</Typography>
-            </TimelineContent>
-          </TimelineItem>
+
+            </TimelineItem>
 
 
-          <TimelineItem>
-            <TimelineOppositeContent
-              sx={{ m: 'auto 0' }}
-              align="right"
-              variant="body2"
-              color="text.secondary"
-              style={{ fontSize: 'small'}}
-            >
-              MongoDB endpoints established with
-              <a href='https://api.mongodb.com/' className="no-underline" style={{ color: 'darkgreen', fontSize: 'small'}}> api.mongodb.com's REST HTTP client </a>
-            </TimelineOppositeContent>
-            <TimelineSeparator style={{ color: 'green' }}>
-              <TimelineConnector style={{ color: 'green' }} />
+            <TimelineItem style={{ border: '3px solid black', borderRadius: '50px', marginBottom: '10px', padding: '25px'}}>
+              <TimelineOppositeContent
+                sx={{ m: 'auto 0' }}
+                align="right"
+                variant="body2"
+                color="text.secondary"
+                style={{ fontSize: 'small' }}
+              >
+                MongoDB endpoints established with
+                <a href='https://api.mongodb.com/' className="no-underline" style={{ color: 'darkgreen', fontSize: 'small' }}> api.mongodb.com's REST HTTP client </a>
+              </TimelineOppositeContent>
+
               <TimelineDot className=' text-xl' style={{ backgroundColor: 'black' }}>
-                
+                📃
               </TimelineDot>
-              <TimelineConnector style={{ color: 'green' }} />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography component="span" style={{ fontSize: 'small'}}>
-                <b>FSD.com</b>
-              </Typography>
-              <Typography style={{ color: 'darkgreen', fontSize: 'small'}}> Pulls data from MongoDB endpoints to fill content.</Typography>
-            </TimelineContent>
-          </TimelineItem>
+
+            </TimelineItem>
 
 
-        </Timeline>
+          </Timeline>
+        </div>
 
       }
 
