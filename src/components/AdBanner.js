@@ -61,14 +61,14 @@ export const AdBanner = () => {
     <>
       {mobileResize ?
 
-        <div className=" text-center bg-white mb-5">
+        <div className=" text-center bg-white mb-5 mt-5" >
 
-          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            <span className="block text-black "> Need help building a web-app ? <br />
+          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" >
+            Need help building a web-app ? 
               <a href='https://linktr.ee/_GMDev' className="no-underline m-10" style={{ color: 'lightgreen' }}>
                 https://linktr.ee/_GMDev
               </a>
-            </span>
+            
           </h2>
 
         </div>

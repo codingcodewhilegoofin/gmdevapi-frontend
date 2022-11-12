@@ -9,6 +9,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Popover, Transition } from '@headlessui/react';
+import { Button } from 'bootstrap';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -22,8 +23,8 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+        <Box sx={{ p: 1 }}>
+          <Typography className="m-0 font-bold">{children}</Typography>
         </Box>
       )}
     </div>
@@ -51,7 +52,6 @@ export const ProjectTabs = () => {
   const handleChangeTabs = (event, newValue) => {
     setValue(newValue);
   };
-
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -84,7 +84,7 @@ export const ProjectTabs = () => {
     }
 
     window.addEventListener('resize', updateSize);
-    console.log(windowSizeX[0]);
+    //console.log(windowSizeX[0]);
 
     return () => {
       window.removeEventListener('resize', updateSize);
@@ -130,18 +130,21 @@ export const ProjectTabs = () => {
           value={value}
           onChange={handleChangeTabs}
           aria-label="Vertical tabs example"
-          sx={{ borderRight: 1, borderColor: 'divider' }}
+          sx={{ borderRight: 1, borderColor: 'black' }}
+          
         >
-          <Tab label="Gio Moscato.com" {...a11yProps(0)} />
-          <Tab label="FullStackingDevelopment.com" {...a11yProps(1)} />
-          <Tab label="gmdevapi.com" {...a11yProps(2)} />
+          <Tab label="GioMoscato.com" {...a11yProps(0)} />
+          <Tab label="FSD" {...a11yProps(1)} />
+          <Tab label="gmdevapi" {...a11yProps(2)} />
          
         </Tabs>
-        <TabPanel value={value} index={0}>
-          A react web app for my personal portfolio
+        <TabPanel  value={value} index={0}>
+          A react web app for my personal portfolio <br/>
+          <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://giomoscato.com/#/">link</button>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          A group web app developed to showcase an array of projects
+          A group web app developed to showcase an array of projects <br/>
+          <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
         </TabPanel>
         <TabPanel value={value} index={2}>
           A multipurpose api to power my personal projects

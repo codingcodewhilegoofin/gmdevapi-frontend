@@ -3,15 +3,7 @@ import { useState, useEffect } from "react";
 import { TimelineComponent } from './TimelineComponent.js';
 
 export const TimelineBanner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
-
-  const toRotate = ["_GMDev", "Antonio Erick", "TeamMember3"];
-
-  const period = 1000;
+  
 
   const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
 
@@ -43,7 +35,7 @@ export const TimelineBanner = () => {
     }
 
     window.addEventListener('resize', updateSize);
-    console.log(windowSizeX[0]);
+    //console.log(windowSizeX[0]);
 
     return () => {
       window.removeEventListener('resize', updateSize);
@@ -60,7 +52,7 @@ export const TimelineBanner = () => {
     <>
       {mobileResize ?
 
-        <>
+          <>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl h-fit ">
             <span className="block text-black text-5xl text-center mt-2"> Projects and 3rd party open source API's<br/> involved with gmdevapi</span>
           </h2>
@@ -87,6 +79,6 @@ export const TimelineBanner = () => {
             </div>
           </>
       }
-        </>
+    </>
   )
 }

@@ -155,8 +155,8 @@ export const AboutBanner = () => {
           
           <div className="bg-black mt-5 ">
 
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
-            <span className="block text-white text-5xl  m-0">
+            <h2 className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl ">
+            <span className="block text-blue-500 text-5xl  ml-2">
               About
             </span>
           </h2>
@@ -164,10 +164,15 @@ export const AboutBanner = () => {
                 <div className="bg-white py-12 w-fit " style={{ border:'1px solid black' }}>
                  
                     <p className="text-center mt-2 text-2xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-                      About gmdevapi and why it's here
+                      About gmdevapi <br/> & <br/> why it's here
                     </p>
-                    <p className="text-center mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                      More detialed information on each project/endpoint can be found above this is about the developers and overall project goal
+                    <p className="text-center mt-4 max-w-2xl text-xl text-blue-300 lg:mx-auto">
+                      More detialed information on each project/endpoint can be found above 
+                    
+                    </p>
+                    <p className="text-center mt-4 max-w-2xl text-xl text-blue-300 lg:mx-auto">
+                 
+                      More on developers and overall project goals bellow
                     </p>
                   </div>
 
@@ -178,7 +183,7 @@ export const AboutBanner = () => {
                           <dt>
                             <p className="ml-1  font-medium leading-6 text-white">{feature.name}</p>
                           </dt>
-                          <dd className="ml-1   text-sm text-white">{feature.description}</dd>
+                          <dd className="ml-1   text-sm text-blue-500">{feature.description}</dd>
                         </div>
                       ))}
                     </dl>
