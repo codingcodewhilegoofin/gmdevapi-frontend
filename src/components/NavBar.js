@@ -307,13 +307,7 @@ export const NavBar = () => {
                 About
               </NavHashLink>
 
-              <NavHashLink
-                smooth to="#about"
-                className="text-base font-medium text-white hover:text-gray-900"
-                activeStyle={{ color: 'red' }}
-              >
-                Contact
-              </NavHashLink>
+           
 
             </Popover.Group>
 
