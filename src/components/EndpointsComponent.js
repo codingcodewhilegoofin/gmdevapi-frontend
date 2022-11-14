@@ -84,7 +84,7 @@ export const EndpointsComponent = () => {
   return (
     <Router>
 
-      <p className="mb-5"> Spotify</p>
+      <p className="mb-5 text-5xl text-green-300"> Spotify</p>
 
       <div>
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -95,12 +95,12 @@ export const EndpointsComponent = () => {
             id="panel1bh-header"
           >
             <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
-            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Does stuff and things to make long hehe</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get gio's personal music data</Typography>
 
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              v1/Spotify
+              /api/Spotify
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -113,190 +113,195 @@ export const EndpointsComponent = () => {
             id="panel1bh-header"
           >
             <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
-            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Does stuff and things to make long hehe</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get any spotify artist's data via search by ID</Typography>
 
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              v1/Spotify
+              /api/Spotify/:artistID
             </Typography>
           </AccordionDetails>
         </Accordion>
 
       </div>
 
-      <p className="mb-5 mt-5"> Arduino</p>
+      <p className="mt-5 mb-5 text-5xl text-blue-300"> Arduino </p>
+
       <div>
         <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>
-              General settings
-            </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Turn on the LED and circuit of microcontroller</Typography>
+
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-              Aliquam eget maximus est, id dignissim quam.
+              /api/Arduino/ToggleON
             </Typography>
           </AccordionDetails>
         </Accordion>
+
         <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2bh-content"
-            id="panel2bh-header"
-          >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              You are currently not an owner
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-              varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-              laoreet.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
 
-
-      </div>
-
-      <p className="mb-5  mt-5"> OpenAi</p>
-      <div>
-        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>
-              General settings
-            </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Turn off the LED and circuit of microcontroller</Typography>
+
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-              Aliquam eget maximus est, id dignissim quam.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2bh-content"
-            id="panel2bh-header"
-          >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              You are currently not an owner
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-              varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-              laoreet.
+              /api/Arduino/ToggleOFF
             </Typography>
           </AccordionDetails>
         </Accordion>
 
+        <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
 
-      </div>
-
-      <p className="mb-5  mt-5"> Financial </p>
-      <div>
-        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>
-              General settings
-            </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get the current status of the board</Typography>
+
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-              Aliquam eget maximus est, id dignissim quam.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2bh-content"
-            id="panel2bh-header"
-          >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              You are currently not an owner
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-              varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-              laoreet.
+              /api/Arduino/STATUS
             </Typography>
           </AccordionDetails>
         </Accordion>
 
+        <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
 
-      </div>
-
-      <p className="mb-5  mt-5"> MongoDB</p>
-      <div>
-        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>
-              General settings
-            </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-              Aliquam eget maximus est, id dignissim quam.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2bh-content"
-            id="panel2bh-header"
-          >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              You are currently not an owner
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-              varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-              laoreet.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Test if the website is ready to recieve API requests</Typography>
 
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              /api/Arduino/TestConnection
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
 
       </div>
 
+      <p className="mt-5 mb-5 text-5xl text-gray-400"> Finance </p>
+
+      <div>
+        <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Get stock data based on symbol, date, & adjustment</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+            /api/Stock/:symbol/:date/:adjusted
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get cypto data based on ticker & adjustment</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              /api/Crypto/:cryptoTicker/:adjusted
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get NFT data and assets based on collectionName</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              /api/Nft/:collectionName
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel10'} onChange={handleChange('panel10')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Debt data provided by US Treasury</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              /api/Gov
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+      </div>
+
+
+      <p className="mt-5 mb-5 text-5xl text-green-600"> MongoDB </p>
+
+      <div>
+        <Accordion expanded={expanded === 'panel11'} onChange={handleChange('panel11')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Test to getAll data</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+             /api/Mongo
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+      </div>
 
     </Router >
   )

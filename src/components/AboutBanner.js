@@ -108,17 +108,17 @@ export const AboutBanner = () => {
         <>
           <div className="bg-black mt-5" id="about">
             <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex-column lg:items-center lg:justify-between lg:py-16 lg:px-8">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
-            <span className="block text-white text-9xl  m-5">
-              About
-            </span>
-          </h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
+                <span className="block text-white text-9xl  m-5">
+                  About
+                </span>
+              </h2>
 
 
               <div className="bg-white py-12">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                   <div className="lg:text-center">
-                   
+
                     <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
                       About gmdevapi and why it's here
                     </p>
@@ -152,44 +152,43 @@ export const AboutBanner = () => {
 
         :
         <>
-          
+
           <div className="bg-black mt-1 " id="about">
 
-            <h2 className=" mt-3 text-5xl  text-blue-500 font-bold tracking-tight text-blue-500 sm:text-4xl " style={{textAlign: 'center'}}>
-            
+            <h2 className=" mt-5 text-5xl  text-blue-500 font-bold tracking-tight text-blue-500 sm:text-4xl " style={{ textAlign: 'center' }}>
+
               About
-         
-          </h2>
 
-                <div className=" mt-5 bg-black py-12 w-fit " style={{ border:'1px solid black' }}>
-                 
-                    <p className="text-center mt-2 text-2xl font-bold leading-8 tracking-tight text-white sm:text-4xl">
-                      About gmdevapi <br/> & <br/> why it's here
-                    </p>
-                    <p className="text-center mt-4 max-w-2xl text-xl text-blue-300 lg:mx-auto">
-                      More detialed information on each project/endpoint can be found above 
-                    
-                    </p>
-                    <p className="text-center mt-4 max-w-2xl text-xl text-blue-400 lg:mx-auto">
-                 
-                      More on developers and overall project goals bellow
-                    </p>
-                  </div>
+            </h2>
 
-                  <div className="mt-5">
-                    <dl className=" ">
-                      {featuresMobile.map((feature) => (
-                        <div key={feature.name} className="relative">
-                          <dt>
-                            <p className="ml-1  font-medium leading-6 text-white">{feature.name}</p>
-                          </dt>
-                          <dd className="ml-1   text-sm text-blue-500">{feature.description}</dd>
-                        </div>
-                      ))}
-                    </dl>
-                  </div>
-    
-  
+            <div className=" mt-1 bg-black py-12 w-fit " style={{ border: '1px solid black' }}>
+
+              <p className="text-center text-2xl font-bold leading-8 tracking-tight text-white sm:text-4xl">
+                About gmdevapi <br /> & <br /> why it's here
+              </p>
+              <p className="text-center mt-4 max-w-2xl text-xl text-blue-300 lg:mx-auto">
+                More detialed information on each project/endpoint can be found above
+
+              </p>
+
+            </div>
+
+            <div className="" style={{ display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+              <div className="m-5" style={{ border: '1px solid white', width: '95%' }}>
+                <dl className=" ">
+                  {featuresMobile.map((feature) => (
+                    <div key={feature.name} className="relative">
+                      <dt>
+                        <p className="ml-1  font-medium leading-6 text-white">{feature.name}</p>
+                      </dt>
+                      <dd className="ml-1   text-sm text-blue-500">{feature.description}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+
+
           </div>
         </>
       }

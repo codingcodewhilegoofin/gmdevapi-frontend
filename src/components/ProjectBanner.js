@@ -109,10 +109,10 @@ export const ProjectBanner = () => {
         </div>
 
         :
-        <div className="bg-black mt-5 " id="projects">
+        <div className="bg-black mt-5 " id="projects" >
           <div className="mx-auto max-w-7xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              <span className="block text-blue-500 text-3xl"> Projects</span>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">
+              <span className="block text-blue-500 text-5xl "> Projects</span>
             </h2>
             <div className="mt-8 flex-column ">
 

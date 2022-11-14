@@ -65,16 +65,22 @@ export const ProjectTabs = () => {
   let showExtras;
   let navClass;
   let variant;
+  let direction;
+  let tabBorder;
 
-  if (windowSizeX[0] < 700) {
+  if (windowSizeX[0] < 600) {
     showExtras = false;
     navClass = 'scrolled-mobile';
     variant = 'dark';
+    direction = "column";
+    tabBorder = " 1px 0px 0px 0px solid white";
   }
   else {
     showExtras = true;
     navClass = 'scrolled';
     variant = 'light';
+    direction = "row";
+    tabBorder = " none";
   }
 
   useEffect(() => {
@@ -101,17 +107,7 @@ export const ProjectTabs = () => {
     console.log("back");
   }
 
-  useEffect(() => {
 
-    function onScroll() {
-      console.log(window.scrollY);
-      setwindowSizeY(window.scrollY);
-    }
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [])
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
@@ -121,40 +117,62 @@ export const ProjectTabs = () => {
     <Router>
 
       <Box
-        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', width: '100%' }}
+        sx={{ flexGrow: 1, bgcolor: 'black', display: 'flex', width: '100%', flexDirection: `${direction}` }}
         className="z-0 "
       >
-        <Tabs
-          orientation="vertical"
-          variant="scrollable"
-          value={value}
-          onChange={handleChangeTabs}
-          aria-label="Vertical tabs example"
-          sx={{ borderRight: 1, borderColor: 'black' }}
-          
-        >
-          <Tab label="GioMoscato.com" {...a11yProps(0)} />
-          <Tab label="FSD" {...a11yProps(1)} />
-          <Tab label="gmdevapi" {...a11yProps(2)} />
-          <Tab label="Nano33IOT" {...a11yProps(3)} />
-         
-        </Tabs>
-        <TabPanel  value={value} index={0}>
-          A react web app for my personal portfolio <br/>
-          <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://giomoscato.com/#/">link</button>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <Tabs
+            orientation="vertical"
+            variant="scrollable"
+            value={value}
+            onChange={handleChangeTabs}
+            aria-label="Vertical tabs example"
+            sx={{ borderRight: 1, borderColor: 'black' }}
+
+          >
+
+            <Tab label="GioMoscato" {...a11yProps(0)} className="bg-black text-white p-4"  />
+            <Tab label="FSD" {...a11yProps(1)} className="bg-black text-white p-4"  />
+            <Tab label="gmdevapi" {...a11yProps(2)} className="bg-black text-white p-4"   />
+            <Tab label="Nano33IOT" {...a11yProps(3)} className="bg-black text-white p-4"  />
+            <Tab label="..." {...a11yProps(4)} className="bg-black text-white p-4"   />
+
+
+          </Tabs>
+        </div>
+        <TabPanel value={value} index={0}>
+          <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
+
+            A react web app for my personal portfolio <br />
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://giomoscato.com/#/">link</button>
+          </div>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          A group web app developed <br/>to showcase an array of projects <br/>
-          <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
+          <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
+
+            A group web app developed <br />to showcase an array of projects <br />
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
+          </div>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          A multipurpose api <br/>to power my personal projects
+          <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
+            A multipurpose api <br />to power my personal projects
+          </div>
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Arduino Nano 33 IOT microcontroller <br/>with custom circuit design <br/>to indicate API availability and <br/>control IRL objects<br/>
-          <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
+          <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
+
+            Arduino Nano 33 IOT microcontroller <br />with custom circuit design <br />to indicate API availability and control IRL objects<br />
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
+          </div>
         </TabPanel>
-        
+
+        <TabPanel value={value} index={4} >
+          <div style={{ textAlign: 'center', width: '100%', height: '100%' }}>
+
+          </div>
+        </TabPanel>
+
       </Box>
     </Router >
   )

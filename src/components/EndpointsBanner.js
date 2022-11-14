@@ -101,6 +101,10 @@ export const EndpointsBanner = () => {
             </span>
           </h2>
 
+          <span className="block text-black text-5xl text-center mt-5">
+              Current list of endpoints available to call
+          </span>
+
           <div className="bg-grey-900 mt-5">
             <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex-column lg:items-center lg:justify-between lg:py-16 lg:px-8">
 
@@ -108,6 +112,11 @@ export const EndpointsBanner = () => {
 
             </div>
           </div>
+
+          <span className="block text-black text-5xl text-center mb-5">
+              More to come!
+          </span>
+          
         </>
 
         :
@@ -117,6 +126,10 @@ export const EndpointsBanner = () => {
               Endpoints
             </span>
           </h2>
+
+          <span className="block text-black text-5xl text-center mt-5">
+              Current list of endpoints available to call
+          </span>
 
           <div className="flex-column bg-white mt-5 ">
             <div className="flex-column mx-auto max-w-6xl py-12 px-1 sm:px-1 lg:flex lg:items-center lg:justify-between lg:py-3 lg:px-3">
@@ -128,6 +141,10 @@ export const EndpointsBanner = () => {
               </div>
             </div>
           </div>
+
+          <span className="block text-black text-5xl text-center mb-5">
+              More to come!
+          </span>
         </>
       }
     </>
