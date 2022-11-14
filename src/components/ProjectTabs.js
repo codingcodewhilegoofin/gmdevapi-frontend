@@ -136,6 +136,7 @@ export const ProjectTabs = () => {
           <Tab label="GioMoscato.com" {...a11yProps(0)} />
           <Tab label="FSD" {...a11yProps(1)} />
           <Tab label="gmdevapi" {...a11yProps(2)} />
+          <Tab label="Nano33IOT" {...a11yProps(3)} />
          
         </Tabs>
         <TabPanel  value={value} index={0}>
@@ -143,11 +144,15 @@ export const ProjectTabs = () => {
           <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://giomoscato.com/#/">link</button>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          A group web app developed to showcase an array of projects <br/>
+          A group web app developed <br/>to showcase an array of projects <br/>
           <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          A multipurpose api to power my personal projects
+          A multipurpose api <br/>to power my personal projects
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          Arduino Nano 33 IOT microcontroller <br/>with custom circuit design <br/>to indicate API availability and <br/>control IRL objects<br/>
+          <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
         </TabPanel>
         
       </Box>
