@@ -90,56 +90,69 @@ export const Banner = () => {
 
   return (
     <>
-    {  mobileResize ?
+      {mobileResize ?
 
-    <div className="bg-white mb-5 ">
-    <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        <span className="block mt-20"> </span>
-        <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500"> CloudFlares</em> edge computing technology </b>,  <em className="text-sky-500"> tailwindCSS</em>, and <em className="text-blue-500"> React.js</em></span>
-      </h2>
-      <div className="mt-8 flex lg:mt-10 lg:flex-shrink-0 lg:flex-col">
+        <div className="bg-white mb-5 ">
+          <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <span className="block mt-20"> </span>
+              <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500"> CloudFlares</em> edge computing technology </b>,  <em className="text-sky-500"> tailwindCSS</em>, and <em className="text-blue-500"> React.js</em></span>
+            </h2>
+            <div className="mt-8 flex lg:mt-10 lg:flex-shrink-0 lg:flex-col">
 
-        <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
-          CloudFlare Workers?
-        </button>
+              <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+                <a href="https://www.cloudflare.com/" className="text-white no-underline" >
+                  CloudFlare Workers?
+                </a>
+              </button>
 
-        <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
-          tailwindCSS ?
-        </button>
+              <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+                <a href="https://tailwindcss.com/docs/border-width" className="text-white no-underline" >
+                  tailwindCSS ?
+                </a>
+              </button>
 
-        <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
-          react.js ?
-        </button>
-      </div>
-    </div>
-  </div>
-
-    :
-    <div className="bg-gray-50 ">
-      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          <span className="block mt-20"> </span>
-          <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500 m-2 text-4xl"> CloudFlares <br/></em>  </b> edge computing technology,  <em className="text-sky-500 m-2"> tailwindCSS</em> & <em className="text-blue-500 m-2"> React.js</em></span>
-        </h2>
-        <div className="mt-8 flex-column sm:p-5 ">
-
-          <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
-            CloudFlare 
-            Workers?
-          </button>
-
-          <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
-            tailwind  CSS ?
-          </button>
-
-          <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
-            react.js ?
-          </button>
+              <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-1">
+                <a href="https://reactjs.org/" className="text-white no-underline" >
+                  react.js ?
+                </a>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    }
+
+        :
+        <div className="bg-gray-50 ">
+          <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <span className="block mt-20"> </span>
+              <span className="block text-black"> A simple multipurpose API powered by <b className="text-5xl"> <em className="text-orange-500 m-2 text-4xl"> CloudFlares <br /></em>  </b> edge computing technology,  <em className="text-sky-500 m-2"> tailwindCSS</em> & <em className="text-blue-500 m-2"> React.js</em></span>
+            </h2>
+            <div className="mt-8 flex-column sm:p-5 ">
+
+              <button class="bg-gradient-to-r from-[#ffffff] to-[#eb5e28] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
+                <a href="https://www.cloudflare.com/" className="text-white no-underline" >
+
+                  CloudFlare
+                  Workers?
+                </a>
+              </button>
+
+              <button class="bg-gradient-to-r from-[#ffffff] to-blue-500 transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
+                <a href="https://tailwindcss.com/docs/border-width" className="text-white no-underline" >
+                  tailwind  CSS ?
+                </a>
+              </button>
+
+              <button class="bg-gradient-to-r from-[#ffffff] to-[#61DBFB] transition-colors rounded-[8px] px-[15px] py-[4px] text-white m-2">
+                <a href="https://reactjs.org/" className="text-white no-underline" >
+                  react.js ?
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      }
     </>
   )
 }

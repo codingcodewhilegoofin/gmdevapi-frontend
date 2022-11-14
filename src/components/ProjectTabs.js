@@ -144,14 +144,14 @@ export const ProjectTabs = () => {
           <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
 
             A react web app for my personal portfolio <br />
-            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://giomoscato.com/#/">link</button>
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="https://giomoscato.com/#/" className="text-white" >link</a></button>
           </div>
         </TabPanel>
         <TabPanel value={value} index={1}>
           <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
 
             A group web app developed <br />to showcase an array of projects <br />
-            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="https://fullstackingdevelopment.com" className="text-white" >link </a></button>
           </div>
         </TabPanel>
         <TabPanel value={value} index={2}>

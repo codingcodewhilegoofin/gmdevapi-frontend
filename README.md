@@ -41,12 +41,12 @@ is a simple multipurpose API powered by CloudFlares edge computing technology , 
 ---
 ## RecentUpdates
 
-- [ ] Code Optimization
-    - [ ] Bug Fixes
+- [X] Code Optimization
+    - [X] Bug Fixes
     - [ ] SEO
     - [ ] Documentation & Organization
 
-- [ ] Content Updated
+- [X] Content Updated
 - [X] Mobile Friendly
 - [X] Basic Design
 - [X] Test & Deploy

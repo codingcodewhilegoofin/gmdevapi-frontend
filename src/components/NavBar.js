@@ -93,13 +93,12 @@ export const NavBar = () => {
   const solutions = [
     {
       name: <>
-        <NavHashLink
-          smooth to="https://giomoscato.com/#/"
-          className="text-base font-medium text-white "
-          activeStyle={{ color: 'red' }}
+        <a
+          href="https://giomoscato.com/"
+        
         >
           Gio Moscato.com
-        </NavHashLink>
+        </a>
       </>,
       description: 'Personal Portfolio Website for Giovanni Moscato built using React.js',
       icon: GlobeAmericasIcon,
