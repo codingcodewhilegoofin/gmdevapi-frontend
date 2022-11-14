@@ -11,7 +11,7 @@ const features = [
   {
     name: 'Is this a public API ?',
     description:
-      'It is a public api with restrictions set to limit useage. The usage limitation is also capped due to 3rd party librarys. All 3rd party API Keys have been securly stored',
+      'It is a public api with restrictions set to limit useage. The usage limitation is also capped due to 3rd party librarys. All 3rd party API Keys have been securely stored',
     icon: GlobeAltIcon,
   },
   {
