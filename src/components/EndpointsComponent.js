@@ -291,12 +291,66 @@ export const EndpointsComponent = () => {
             id="panel1bh-header"
           >
             <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
-            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Test to getAll data</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Get all data</Typography>
 
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
              /api/Mongo
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel12'} onChange={handleChange('panel12')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'Purple' }}>POST</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Create a new entry</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+             /api/MongoCreate
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel13'} onChange={handleChange('panel13')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'darkgreen' }}>PUT</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Update entry</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+             /api/MongoUpdate
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel14'} onChange={handleChange('panel14')}>
+
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
+          >
+            <Typography sx={{ color: 'red' }}>DELETE</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}> Delete entry</Typography>
+
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+             /api/MongoDelete
             </Typography>
           </AccordionDetails>
         </Accordion>

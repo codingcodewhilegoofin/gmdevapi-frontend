@@ -113,9 +113,7 @@ export const EndpointsBanner = () => {
             </div>
           </div>
 
-          <span className="block text-black text-5xl text-center mb-5">
-              More to come!
-          </span>
+          
           
         </>
 
@@ -142,9 +140,7 @@ export const EndpointsBanner = () => {
             </div>
           </div>
 
-          <span className="block text-black text-5xl text-center mb-5">
-              More to come!
-          </span>
+         
         </>
       }
     </>
