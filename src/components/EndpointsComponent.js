@@ -95,7 +95,7 @@ export const EndpointsComponent = () => {
             id="panel1bh-header"
           >
             <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
-            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get gio's personal music data</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get personal music data</Typography>
 
           </AccordionSummary>
           <AccordionDetails>
@@ -267,7 +267,7 @@ export const EndpointsComponent = () => {
             id="panel1bh-header"
           >
             <Typography sx={{ color: 'lightgreen' }}>GET</Typography>
-            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Debt data provided by US Treasury</Typography>
+            <Typography sx={{ color: 'black', marginLeft: '10px' }}>Get Debt data provided by US Treasury</Typography>
 
           </AccordionSummary>
           <AccordionDetails>

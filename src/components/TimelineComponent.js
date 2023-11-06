@@ -116,7 +116,7 @@ export const TimelineComponent = () => {
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
               <Typography component="span" style={{ fontSize: 'x-large' }}>
-                <b>giomoscato.com</b>
+                <b>gmdevstore.com</b>
               </Typography>
               <Typography style={{ fontSize: 'large' }}>Uses gmdevapi financial endpoints to update its stock & crypto UI cards</Typography>
             </TimelineContent>
@@ -142,7 +142,7 @@ export const TimelineComponent = () => {
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
               <Typography component="span" style={{ fontSize: 'x-large' }}>
-                <b>giomoscato.com</b>
+                <b>gmdevstore.com</b>
               </Typography>
               <Typography style={{ color: 'green', fontSize: 'large' }}>Spotify endpoints enable query of my music or any musican you like</Typography>
             </TimelineContent>
@@ -169,7 +169,7 @@ export const TimelineComponent = () => {
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
               <Typography component="span" style={{ fontSize: 'x-large' }}>
-                <b>giomoscato.com</b>
+                <b>gmdevstore.com</b>
               </Typography>
               <Typography style={{ color: 'teal', fontSize: 'large' }}>Arduino endpoints control an irl IOT device circuit through a nano 33 controller.</Typography>
             </TimelineContent>

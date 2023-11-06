@@ -94,24 +94,24 @@ export const NavBar = () => {
     {
       name: <>
         <a
-          href="https://giomoscato.com/"
+          href="https://gmdevstore.com/"
         
         >
-          Gio Moscato.com
+          gmdevstore
         </a>
       </>,
-      description: 'Personal Portfolio Website for Giovanni Moscato built using React.js',
+      description: 'Personal Portfolio Website for built using React.js',
       icon: GlobeAmericasIcon,
 
     },
     {
       name: <>
         <a
-          href="https://fullstackingdevelopment.com/"
+          href=""
           className="text-base font-medium text-white no-underline"
 
         >
-          FullStackingDevelopment.com
+          tbd
         </a>
       </>,
       description: 'Our team is experienced in a range of programming applications.FSD.com is a full stack website utilizing alot of our skillset, built in the React JS framework.',
@@ -133,7 +133,7 @@ export const NavBar = () => {
 
   ]
   const callsToAction = [
-    { name: 'Github', href: 'https://github.com/fullstackingdevelopment' },
+    { name: 'Github', href: 'https://linktr.ee/codedumpsterfire' },
     { name: 'Example', },
   ]
   const resources = [
@@ -153,11 +153,7 @@ export const NavBar = () => {
     },
 
   ]
-  const recentPosts = [
-    { id: 1, name: 'Boost your conversion rate', href: '#' },
-    { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-    { id: 3, name: 'Improve your customer experience', href: '#' },
-  ]
+
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')

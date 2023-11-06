@@ -8,8 +8,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { Popover, Transition } from '@headlessui/react';
-import { Button } from 'bootstrap';
+import ReactLogo from '../assets/img/react-real.png';
+import ElectronicsLogo from '../assets/img/Electronics site.png';
+import ApiLogo from '../assets/img/Api logo.png';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -131,7 +132,7 @@ export const ProjectTabs = () => {
 
           >
 
-            <Tab label="GioMoscato" {...a11yProps(0)} className="bg-black text-white p-4"  />
+            <Tab label="gmdevstore" {...a11yProps(0)} className="bg-black text-white p-4"  />
             <Tab label="FSD" {...a11yProps(1)} className="bg-black text-white p-4"  />
             <Tab label="gmdevapi" {...a11yProps(2)} className="bg-black text-white p-4"   />
             <Tab label="Nano33IOT" {...a11yProps(3)} className="bg-black text-white p-4"  />
@@ -140,11 +141,11 @@ export const ProjectTabs = () => {
 
           </Tabs>
         </div>
-        <TabPanel value={value} index={0}>
-          <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
-
+        <TabPanel value={value} index={0} width="100%">
+          <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white', display:'flex',flexDirection: 'column', width: '100%' }}>
             A react web app for my personal portfolio <br />
-            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="https://giomoscato.com/#/" className="text-white" >link</a></button>
+            <img class="object-contain h-48 w-96 p-2" src={ReactLogo}></img>
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="https://gmdevstore.com/#/" className="text-white" >gmdevstore.com</a></button>
           </div>
         </TabPanel>
         <TabPanel value={value} index={1}>
@@ -156,14 +157,17 @@ export const ProjectTabs = () => {
         </TabPanel>
         <TabPanel value={value} index={2}>
           <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
+         
             A multipurpose api <br />to power my personal projects
+            <img class="object-contain h-48 w-96 p-2" src={ApiLogo}></img>
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="https://gmdevapi.com/#/" className="text-white" >gmdevapi.com</a></button>
           </div>
         </TabPanel>
         <TabPanel value={value} index={3}>
           <div style={{ textAlign: 'center', color: 'white', fontSize: 'medium', padding: '50px', border: '1px solid white' }}>
-
             Arduino Nano 33 IOT microcontroller <br />with custom circuit design <br />to indicate API availability and control IRL objects<br />
-            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" href="https://fullstackingdevelopment.com">link</button>
+            <img class="object-contain h-48 w-96 p-2" src={ElectronicsLogo}></img>
+            <button class="mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"><a href="https://gmdevelectronics.wixsite.com/blog" className="text-white" >gmdevelectronics.com</a></button>
           </div>
         </TabPanel>
 

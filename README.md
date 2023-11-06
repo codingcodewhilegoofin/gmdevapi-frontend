@@ -13,8 +13,7 @@
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-blue)
 ![CloudFlareWorkers](https://img.shields.io/badge/CloudFlare-Workers-orange)
 
-> https://twitter.com/_GmDev
-[![Twitter](https://badgen.net/badge/icon/twitter?icon=twitter&label)](https://twitter.com)
+
 
 # gmdevapi 
 is a simple multipurpose API powered by CloudFlares edge computing technology , tailwindCSS, and React.js
@@ -22,7 +21,7 @@ is a simple multipurpose API powered by CloudFlares edge computing technology , 
 
 ### This repository contains:
 
-1. Timline of projects using this API
+1. Timeline of projects using this API
 2. List of those projects
 3. Endpoint list
 4. About 
@@ -40,6 +39,10 @@ is a simple multipurpose API powered by CloudFlares edge computing technology , 
 - [License](#license)
 ---
 ## RecentUpdates
+- [ ] Projects tab needs row / column fix and sizing
+- [ ] Projects tab needs more content 
+- [ ] Timeline needs to be fixed 
+- [ ] Responsive scaling 
 
 - [X] Code Optimization
     - [X] Bug Fixes
@@ -128,28 +131,22 @@ Spotify
   }
 ---
 # RelatedProjects
-Team project 
-> https://fullstackingdevelopment.com
 
 My website 
-> https://giomoscato.com
-
-My store 
 > https://gmdevstore.com
 
 ---
 # Maintainers
-**Giovanni Moscato**
-[Yupimaperson101@protonmail.com](Yupimaperson101@protonmail.com)
+[gmdevgithub]()
 
-> `  @_GMDev `
+>@_gmDev
 
 ### Contributing
 **NA**
 
 
 ## Contributors
-**Giovanni J Moscato**
+
 
 ---
 

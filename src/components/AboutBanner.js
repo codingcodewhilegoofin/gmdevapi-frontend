@@ -65,7 +65,7 @@ export const AboutBanner = () => {
   let tagline;
   let devDescription;
 
-  if (windowSizeX[0] < 700) {
+  if (windowSizeX[0] < 1000) {
     mobileResize = false;
     typingAnimation = 'wrap-mobile';
     bannerOffset = 'banner-mobile';
@@ -94,12 +94,13 @@ export const AboutBanner = () => {
     }
   }, [windowSizeX])
 
+
+
   useEffect(() => {
     window.scrollTo(0, 0)
     setwindowSizeX([window.innerWidth, window.innerHeight]);
 
   }, [])
-
 
   return (
     <>
@@ -120,7 +121,7 @@ export const AboutBanner = () => {
                   <div className="lg:text-center">
 
                     <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-                      About gmdevapi and why it's here
+                      About this api
                     </p>
                     <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
                       More detialed information on each project/endpoint can be found above this is about the developers and overall project goal
@@ -164,7 +165,7 @@ export const AboutBanner = () => {
             <div className=" mt-1 bg-black py-12 w-fit " style={{ border: '1px solid black' }}>
 
               <p className="text-center text-2xl font-bold leading-8 tracking-tight text-white sm:text-4xl">
-                About gmdevapi <br /> & <br /> why it's here
+                About this api 
               </p>
               <p className="text-center mt-4 max-w-2xl text-xl text-blue-300 lg:mx-auto">
                 More detialed information on each project/endpoint can be found above
