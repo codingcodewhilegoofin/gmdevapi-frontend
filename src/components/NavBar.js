@@ -9,17 +9,7 @@ import {
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  BookmarkSquareIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorArrowRaysIcon,
-  LifebuoyIcon,
-  PhoneIcon,
-  PlayIcon,
-  ShieldCheckIcon,
-  Squares2X2Icon,
   XMarkIcon,
   GlobeAmericasIcon,
   WifiIcon,
@@ -33,13 +23,31 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
-
   let showExtras;
   let navClass;
   let variant;
 
-  if (windowSizeX[0] < 700) {
+  const [windowSize, setWindowSize] = useState(false);
+
+  useEffect(() => {
+    //Initialize
+    const mq = window.matchMedia("(max-width: 1000px)");
+    setWindowSize(mq.matches);
+
+    //Update
+    function updateSize(e) {
+      setWindowSize(e.matches);
+      console.log(mq.matches);
+    }
+
+    mq.addEventListener("change", updateSize);
+
+    return function clean() {
+      mq.removeEventListener("change", updateSize);
+    };
+  }, []);
+
+  if (windowSize) {
     showExtras = false;
     navClass = 'scrolled-mobile';
     variant = 'dark';
@@ -49,42 +57,6 @@ export const NavBar = () => {
     navClass = 'scrolled';
     variant = 'light';
   }
-
-  useEffect(() => {
-
-    function updateSize() {
-      setwindowSizeX([window.innerWidth, window.innerHeight]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    console.log(windowSizeX[0]);
-
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    }
-  }, [windowSizeX])
-
-  const [windowSizeY, setwindowSizeY] = useState(window.innerHeight);
-
-  if (windowSizeY > 100) {
-    console.log("bigger");
-
-  }
-  else {
-    console.log("back");
-  }
-
-  useEffect(() => {
-
-    function onScroll() {
-      console.log(window.scrollY);
-      setwindowSizeY(window.scrollY);
-    }
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [])
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
@@ -153,7 +125,6 @@ export const NavBar = () => {
     },
 
   ]
-
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')

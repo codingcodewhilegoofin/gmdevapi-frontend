@@ -7,12 +7,8 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-
   const toRotate = ["_GMDev", "Antonio Erick", "TeamMember3"];
-
   const period = 1000;
-
-  const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
 
   let mobileResize;
   let typingAnimation;;
@@ -20,7 +16,27 @@ export const Banner = () => {
   let tagline;
   let devDescription;
 
-  if (windowSizeX[0] < 700) {
+  const [windowSize, setWindowSize] = useState(false);
+
+  useEffect(() => {
+    //Initialize
+    const mq = window.matchMedia("(max-width: 1000px)");
+    setWindowSize(mq.matches);
+
+    //Update
+    function updateSize(e) {
+      setWindowSize(e.matches);
+      console.log(mq.matches);
+    }
+
+    mq.addEventListener("change", updateSize);
+
+    return function clean() {
+      mq.removeEventListener("change", updateSize);
+    };
+  }, []);
+
+  if (windowSize) {
     mobileResize = false;
     typingAnimation = 'wrap-mobile';
     bannerOffset = 'banner-mobile';
@@ -35,25 +51,7 @@ export const Banner = () => {
     devDescription = 'p';
   }
 
-  useEffect(() => {
-
-    function updateSize() {
-      setwindowSizeX([window.innerWidth, window.innerHeight]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    console.log(windowSizeX[0]);
-
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    }
-  }, [windowSizeX])
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    setwindowSizeX([window.innerWidth, window.innerHeight]);
-
-  }, [])
+  
 
   useEffect(() => {
     let ticker = setInterval(() => {

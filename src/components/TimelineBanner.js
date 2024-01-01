@@ -3,9 +3,6 @@ import { useState, useEffect } from "react";
 import { TimelineComponent } from './TimelineComponent.js';
 
 export const TimelineBanner = () => {
-  
-
-  const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
 
   let mobileResize;
   let typingAnimation;;
@@ -13,7 +10,27 @@ export const TimelineBanner = () => {
   let tagline;
   let devDescription;
 
-  if (windowSizeX[0] < 700) {
+  const [windowSize, setWindowSize] = useState(false);
+
+  useEffect(() => {
+    //Initialize
+    const mq = window.matchMedia("(max-width: 1000px)");
+    setWindowSize(mq.matches);
+
+    //Update
+    function updateSize(e) {
+      setWindowSize(e.matches);
+      console.log(mq.matches);
+    }
+
+    mq.addEventListener("change", updateSize);
+
+    return function clean() {
+      mq.removeEventListener("change", updateSize);
+    };
+  }, []);
+
+  if (windowSize) {
     mobileResize = false;
     typingAnimation = 'wrap-mobile';
     bannerOffset = 'banner-mobile';
@@ -27,26 +44,6 @@ export const TimelineBanner = () => {
     tagline = 'tagline';
     devDescription = 'p';
   }
-
-  useEffect(() => {
-
-    function updateSize() {
-      setwindowSizeX([window.innerWidth, window.innerHeight]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    //console.log(windowSizeX[0]);
-
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    }
-  }, [windowSizeX])
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    setwindowSizeX([window.innerWidth, window.innerHeight]);
-
-  }, [])
 
   return (
     <>

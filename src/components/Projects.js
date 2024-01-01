@@ -12,42 +12,45 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
-  const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
-
   let showExtras;
   let typingAnimation;;
   let bannerOffset;
   let tagline;
   let devDescription;
 
-  if (windowSizeX[0] < 700) {
+  const [windowSize, setWindowSize] = useState(false);
+
+  useEffect(() => {
+    //Initialize
+    const mq = window.matchMedia("(max-width: 1000px)");
+    setWindowSize(mq.matches);
+
+    //Update
+    function updateSize(e) {
+      setWindowSize(e.matches);
+      console.log(mq.matches);
+    }
+
+    mq.addEventListener("change", updateSize);
+
+    return function clean() {
+      mq.removeEventListener("change", updateSize);
+    };
+  }, []);
+
+  if (windowSize) {
     showExtras = false;
     typingAnimation = 'wrap-mobile';
     bannerOffset = 'banner-mobile';
     tagline = 'tagline-mobile';
     devDescription = 'p-mobile';
-  }
-  else {
+  } else {
     showExtras = true;
     typingAnimation = 'wrap';
     bannerOffset = 'banner';
     tagline = 'tagline';
     devDescription = 'p';
   }
-
-  useEffect(() => {
-
-    function updateSize() {
-      setwindowSizeX([window.innerWidth, window.innerHeight]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    console.log(windowSizeX[0]);
-
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    }
-  }, [windowSizeX])
 
   const personalProjects = [
     {

@@ -61,15 +61,33 @@ export const ProjectTabs = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
-
   let showExtras;
   let navClass;
   let variant;
   let direction;
   let tabBorder;
 
-  if (windowSizeX[0] < 600) {
+  const [windowSize, setWindowSize] = useState(false);
+
+  useEffect(() => {
+    //Initialize
+    const mq = window.matchMedia("(max-width: 1000px)");
+    setWindowSize(mq.matches);
+
+    //Update
+    function updateSize(e) {
+      setWindowSize(e.matches);
+      console.log(mq.matches);
+    }
+
+    mq.addEventListener("change", updateSize);
+
+    return function clean() {
+      mq.removeEventListener("change", updateSize);
+    };
+  }, []);
+
+  if (windowSize) {
     showExtras = false;
     navClass = 'scrolled-mobile';
     variant = 'dark';
@@ -83,32 +101,6 @@ export const ProjectTabs = () => {
     direction = "row";
     tabBorder = " none";
   }
-
-  useEffect(() => {
-
-    function updateSize() {
-      setwindowSizeX([window.innerWidth, window.innerHeight]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    //console.log(windowSizeX[0]);
-
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    }
-  }, [windowSizeX])
-
-  const [windowSizeY, setwindowSizeY] = useState(window.innerHeight);
-
-  if (windowSizeY > 100) {
-    console.log("bigger");
-
-  }
-  else {
-    console.log("back");
-  }
-
-
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);

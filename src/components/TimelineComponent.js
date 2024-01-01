@@ -22,14 +22,32 @@ export const TimelineComponent = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  const [windowSizeX, setwindowSizeX] = useState(window.innerWidth);
-
   let showExtras;
   let navClass;
   let variant;
   let mobileResize;
 
-  if (windowSizeX[0] < 700) {
+  const [windowSize, setWindowSize] = useState(false);
+
+  useEffect(() => {
+    //Initialize
+    const mq = window.matchMedia("(max-width: 700px)");
+    setWindowSize(mq.matches);
+
+    //Update
+    function updateSize(e) {
+      setWindowSize(e.matches);
+      console.log(mq.matches);
+    }
+
+    mq.addEventListener("change", updateSize);
+
+    return function clean() {
+      mq.removeEventListener("change", updateSize);
+    };
+  }, []);
+
+  if (windowSize) {
     showExtras = false;
     mobileResize = false;
     navClass = 'scrolled-mobile';
@@ -41,52 +59,12 @@ export const TimelineComponent = () => {
     navClass = 'scrolled';
     variant = 'light';
   }
-
-  useEffect(() => {
-
-    function updateSize() {
-      setwindowSizeX([window.innerWidth, window.innerHeight]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    console.log(windowSizeX[0]);
-
-    return () => {
-      window.removeEventListener('resize', updateSize);
-    }
-  }, [windowSizeX])
-
-  const [windowSizeY, setwindowSizeY] = useState(window.innerHeight);
-
-  if (windowSizeY > 100) {
-    console.log("bigger");
-
-  }
-  else {
-    console.log("back");
-  }
-
-  useEffect(() => {
-
-    function onScroll() {
-      console.log(window.scrollY);
-      setwindowSizeY(window.scrollY);
-    }
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [])
-
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  }
-
+ 
   return (
     <Router>
       {mobileResize ?
 
-        <Timeline position="alternate" style={{ width: '100%', }}>
+        <Timeline position="alternate" style={{ width: '100%', padding:"20px" }}>
 
 
 
@@ -109,7 +87,7 @@ export const TimelineComponent = () => {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector style={{ color: 'black' }} />
-              <TimelineDot className=' text-3xl p-2' style={{ backgroundColor: 'purple' }} >
+              <TimelineDot className=' text-3xl p-2' style={{ backgroundColor: 'purple', margin:"30px" }} >
                 💸
               </TimelineDot>
               <TimelineConnector />
@@ -162,7 +140,7 @@ export const TimelineComponent = () => {
             </TimelineOppositeContent>
             <TimelineSeparator style={{ color: 'green' }}>
               <TimelineConnector style={{ color: 'green' }} />
-              <TimelineDot className=' text-3xl p-2' style={{ backgroundColor: 'lightblue' }}>
+              <TimelineDot className=' text-3xl p-2' style={{ backgroundColor: 'lightblue', margin:"30px"  }}>
                 📶
               </TimelineDot>
               <TimelineConnector style={{ color: 'green' }} />
@@ -229,7 +207,7 @@ export const TimelineComponent = () => {
 
             </p>
 
-            <TimelineItem style={{ border: '3px solid purple', borderRadius: '50px', marginBottom: '10px', padding: '5px'}}>
+            <TimelineItem style={{ border: '3px solid purple', borderRadius: '10px', marginBottom: '10px', padding: '5px'}}>
               <TimelineOppositeContent
                 sx={{ m: 'auto 0' }}
                 align="right"
@@ -249,7 +227,7 @@ export const TimelineComponent = () => {
 
             </TimelineItem>
 
-            <TimelineItem style={{ border: '3px solid lightgreen', borderRadius: '50px', marginBottom: '10px', padding: '25px'}}>
+            <TimelineItem style={{ marginBottom:"10px", border: '3px solid lightgreen', borderRadius: '10px', margin: '0px', padding: '0px'}}>
               <TimelineOppositeContent
                 sx={{ m: 'auto 0' }}
                 align="left"
@@ -261,7 +239,7 @@ export const TimelineComponent = () => {
                 <a href='https://developer.spotify.com/' className="no-underline" style={{ color: 'green' }}> developer.spotify.com </a>
               </TimelineOppositeContent>
 
-              <TimelineDot className='text-xl ' style={{ backgroundColor: 'lightgreen', padding: '5px', margin: '0px' }}>
+              <TimelineDot className='text-xl ' style={{ backgroundColor: 'lightgreen', padding: '5px', margin: '5px' }}>
                 🎹
               </TimelineDot>
 
@@ -269,7 +247,7 @@ export const TimelineComponent = () => {
             </TimelineItem>
 
 
-            <TimelineItem style={{ border: '3px solid lightblue', borderRadius: '50px', marginBottom: '10px', padding: '5px'}}> 
+            <TimelineItem style={{ border: '3px solid lightblue', borderRadius: '10px', marginBottom: '10px', padding: '5px'}}> 
               <TimelineOppositeContent
                 sx={{ m: 'auto 0' }}
                 align="right"
@@ -281,14 +259,14 @@ export const TimelineComponent = () => {
                 <a href='https://cloud.arduino.cc/?gclid=CjwKCAjwkaSaBhA4EiwALBgQaJPfS_x_GSima_LReNflki1Z1CsvOfF9yd1A4JsZZkBSKklIkEW2AxoCpowQAvD_BwE' className="no-underline" style={{ color: 'teal' }}> Arduino IOT CLOUD </a>
               </TimelineOppositeContent>
 
-              <TimelineDot className=' text-2xl' style={{ backgroundColor: 'lightblue' }}>
+              <TimelineDot className=' text-xl' style={{ backgroundColor: 'lightblue', padding: '5px', marginRight: '10px' }}>
                 📶
               </TimelineDot>
 
             </TimelineItem>
 
 
-            <TimelineItem style={{ border: '3px solid black', borderRadius: '50px', marginBottom: '10px', padding: '25px'}}>
+            <TimelineItem style={{ border: '3px solid black', borderRadius: '10px', marginBottom: '10px', padding: '0px'}}>
               <TimelineOppositeContent
                 sx={{ m: 'auto 0' }}
                 align="right"
@@ -300,7 +278,7 @@ export const TimelineComponent = () => {
                 <a href='https://api.mongodb.com/' className="no-underline" style={{ color: 'darkgreen', fontSize: 'small' }}> api.mongodb.com's REST HTTP client </a>
               </TimelineOppositeContent>
 
-              <TimelineDot className=' text-xl' style={{ backgroundColor: 'black' }}>
+              <TimelineDot className=' text-xl' style={{ backgroundColor: 'black', padding: '5px', margin: '10px' }}>
                 📃
               </TimelineDot>
 

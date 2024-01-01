@@ -1,7 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
 
-
-
 const date = new Date();
 
 export const Footer = () => {
