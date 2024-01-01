@@ -94,11 +94,11 @@ export const EndpointsBanner = () => {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl " id="endpoints">
             <span className="block text-black text-5xl text-center mt-5">
               Endpoints
-            </span>
+            </span> 
           </h2>
 
           <span className="block text-black text-5xl text-center mt-5">
-              Current list of endpoints available to call
+              Current list of public http endpoints 
           </span>
 
           <div className="bg-grey-900 mt-5">
@@ -122,7 +122,7 @@ export const EndpointsBanner = () => {
           </h2>
 
           <span className="block text-black text-5xl text-center mt-5">
-              Current list of endpoints available to call
+            Current list of public http endpoints 
           </span>
 
           <div className="flex-column bg-white mt-5 ">

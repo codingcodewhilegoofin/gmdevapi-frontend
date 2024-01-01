@@ -69,7 +69,7 @@ export const TimelineComponent = () => {
 
 
           <p className="text-center text-3xl" >
-            <b style={{ color: 'orange' }}>CloudFlare worker </b> is created and front-end deployed to CloudFlare pages via <b>github</b>
+            A <b style={{ color: 'orange' }}>CloudFlare worker </b> is created. React site deployed to CloudFlare pages via <b>github</b>
 
           </p>
 
@@ -122,7 +122,7 @@ export const TimelineComponent = () => {
               <Typography component="span" style={{ fontSize: 'x-large' }}>
                 <b>gmdevstore.com</b>
               </Typography>
-              <Typography style={{ color: 'green', fontSize: 'large' }}>Spotify endpoints enable query of my music or any musican you like</Typography>
+              <Typography style={{ color: 'green', fontSize: 'large' }}>Spotify endpoints enable query select group of musician data</Typography>
             </TimelineContent>
           </TimelineItem>
 
@@ -203,7 +203,7 @@ export const TimelineComponent = () => {
           <Timeline position="alternate" style={{ width: '100%', }}>
 
             <p className="text-center" style={{ fontSize: 'medium' }}>
-              <b style={{ color: 'orange' }}>CloudFlare worker </b> is created and front end <br /> deployed to CloudFlare pages via <b>github</b>
+              A <b style={{ color: 'orange' }}>CloudFlare worker </b> is created. React site <br /> deployed to CloudFlare pages via <b>github</b>
 
             </p>
 
